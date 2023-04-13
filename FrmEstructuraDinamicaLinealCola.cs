@@ -24,16 +24,24 @@ namespace PryEstructuraDeDatos
         ClsCola FilaDePersonas = new ClsCola();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ClsNodo ObjNodo = new ClsNodo();
-            ObjNodo.codigo = Convert.ToInt32(txtCodigo.Text);
-            ObjNodo.nombre = txtNombre.Text;
-            ObjNodo.tramite = txtTramite.Text;
+            try
+            {
+                ClsNodo ObjNodo = new ClsNodo();
+                ObjNodo.codigo = Convert.ToInt32(txtCodigo.Text);
+                ObjNodo.nombre = txtNombre.Text;
+                ObjNodo.tramite = txtTramite.Text;
 
-            FilaDePersonas.Agregar(ObjNodo);
-            FilaDePersonas.Recorrer(dgvCola);
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";   
+                FilaDePersonas.Agregar(ObjNodo);
+                FilaDePersonas.Recorrer(dgvCola);
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message.ToString());
+            }
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
