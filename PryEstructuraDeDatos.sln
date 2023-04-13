@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PryEstructuraDeDatos", "PryEstructuraDeDatos.csproj", "{34D2C166-E90B-470C-8C7C-16D0D43BFEEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34D2C166-E90B-470C-8C7C-16D0D43BFEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D2C166-E90B-470C-8C7C-16D0D43BFEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D2C166-E90B-470C-8C7C-16D0D43BFEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34D2C166-E90B-470C-8C7C-16D0D43BFEEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14ECBD91-F293-41C8-8899-D6B176A97B43}
+	EndGlobalSection
+EndGlobal
