@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PryEstructuraDeDatos
 {
-    public partial class FrmEstructuraDinamicaLinealPila1 : Form
+    public partial class FrmEstructuraDinamicaListaSimple : Form
     {
-        public FrmEstructuraDinamicaLinealPila1()
+        public FrmEstructuraDinamicaListaSimple()
         {
             InitializeComponent();
+        }
+
+        private void cboCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

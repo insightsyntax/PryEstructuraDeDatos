@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsCola.cs" />
+    <Compile Include="ClsListaSimple.cs" />
     <Compile Include="ClsNodo.cs" />
+    <Compile Include="ClsPila.cs" />
     <Compile Include="DatosdelProgramador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,11 +62,17 @@
     <Compile Include="FrmEstructuraDinamicaLinealCola.Designer.cs">
       <DependentUpon>FrmEstructuraDinamicaLinealCola.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEstructuraDinamicaLinealPila1.cs">
+    <Compile Include="FrmEstructuraDinamicaLinealPila.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEstructuraDinamicaLinealPila1.Designer.cs">
-      <DependentUpon>FrmEstructuraDinamicaLinealPila1.cs</DependentUpon>
+    <Compile Include="FrmEstructuraDinamicaLinealPila.Designer.cs">
+      <DependentUpon>FrmEstructuraDinamicaLinealPila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstructuraDinamicaListaSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstructuraDinamicaListaSimple.Designer.cs">
+      <DependentUpon>FrmEstructuraDinamicaListaSimple.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -80,8 +88,11 @@
     <EmbeddedResource Include="FrmEstructuraDinamicaLinealCola.resx">
       <DependentUpon>FrmEstructuraDinamicaLinealCola.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEstructuraDinamicaLinealPila1.resx">
-      <DependentUpon>FrmEstructuraDinamicaLinealPila1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEstructuraDinamicaLinealPila.resx">
+      <DependentUpon>FrmEstructuraDinamicaLinealPila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstructuraDinamicaListaSimple.resx">
+      <DependentUpon>FrmEstructuraDinamicaListaSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -108,6 +119,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Pila.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ed5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

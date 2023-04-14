@@ -7,37 +7,30 @@ using System.Windows.Forms;
 
 namespace PryEstructuraDeDatos
 {
-    class ClsCola
+    class ClsPila
     {
         public ClsNodo Primero;
-        public ClsNodo Ultimo;
 
-        public void Agregar (ClsNodo Nuevo)
+        public void Agregar(ClsNodo Nuevo)
         {
             if (Primero == null)
             {
                 Primero = Nuevo;
-                Ultimo = Nuevo;
             }
             else
             {
-                Ultimo.siguiente = Nuevo;
-                Ultimo = Nuevo;
+                Nuevo.siguiente = Primero;
+                Primero = Nuevo;
             }
         }
+        
         public void Eliminar()
         {
-            if (Primero == Ultimo)
-            {
-                Primero = null;
-                Ultimo = null;
-            }
-            else
+            if (Primero != null)
             {
                 Primero = Primero.siguiente;
             }
-        }        
-
+        }
         public void Recorrer(DataGridView Grilla)
         {
             ClsNodo aux = Primero;
@@ -54,7 +47,7 @@ namespace PryEstructuraDeDatos
             Lista.Items.Clear();
             while (aux != null)
             {
-                Lista.Items.Add(aux.codigo + " " + aux.nombre + " " + aux.tramite);
+                Lista.Items.Add("Codigo:" + aux.codigo + " Nombre:" + aux.nombre + " Tramite:" + aux.tramite);
                 aux = aux.siguiente;
             }
         }
@@ -68,7 +61,6 @@ namespace PryEstructuraDeDatos
                 aux = aux.siguiente;
             }
         }
-
 
 
     }

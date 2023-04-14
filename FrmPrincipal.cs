@@ -26,7 +26,8 @@ namespace PryEstructuraDeDatos
 
         private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmEstructuraDinamicaLinealPila estructuraDinamicaLinealPila1 = new FrmEstructuraDinamicaLinealPila();
+            estructuraDinamicaLinealPila1.Show();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

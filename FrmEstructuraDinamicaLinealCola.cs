@@ -33,6 +33,7 @@ namespace PryEstructuraDeDatos
 
                 FilaDePersonas.Agregar(ObjNodo);
                 FilaDePersonas.Recorrer(dgvCola);
+                FilaDePersonas.Recorrer(LstCola);
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
                 txtTramite.Text = "";

@@ -1,6 +1,6 @@
 ﻿namespace PryEstructuraDeDatos
 {
-    partial class FrmEstructuraDinamicaLinealPila1
+    partial class FrmEstructuraDinamicaLinealPila
     {
         /// <summary>
         /// Required designer variable.
@@ -45,18 +45,20 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dgvCola = new System.Windows.Forms.DataGridView();
+            this.dgvPila = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LstCola = new System.Windows.Forms.ListBox();
+            this.LstPila = new System.Windows.Forms.ListBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -77,12 +79,13 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(39, 172);
+            this.btnEliminar.Location = new System.Drawing.Point(47, 172);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(174, 39);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // textBox3
             // 
@@ -127,6 +130,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(111, 20);
             this.textBox5.TabIndex = 1;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -156,12 +160,13 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(39, 172);
+            this.btnAgregar.Location = new System.Drawing.Point(33, 172);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(174, 39);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -203,6 +208,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(111, 20);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -217,12 +223,23 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(239, 245);
+            this.groupBox1.Size = new System.Drawing.Size(239, 239);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PryEstructuraDeDatos.Properties.Resources._200px_Pila_svg;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(227, 214);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -237,8 +254,8 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox4.Controls.Add(this.dgvCola);
-            this.groupBox4.Controls.Add(this.LstCola);
+            this.groupBox4.Controls.Add(this.dgvPila);
+            this.groupBox4.Controls.Add(this.LstPila);
             this.groupBox4.Location = new System.Drawing.Point(12, 277);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(867, 280);
@@ -246,19 +263,19 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Listado en una lista y una grilla";
             // 
-            // dgvCola
+            // dgvPila
             // 
-            this.dgvCola.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPila.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvCola.Location = new System.Drawing.Point(269, 19);
-            this.dgvCola.Name = "dgvCola";
-            this.dgvCola.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvCola.Size = new System.Drawing.Size(592, 255);
-            this.dgvCola.TabIndex = 3;
+            this.dgvPila.Location = new System.Drawing.Point(269, 19);
+            this.dgvPila.Name = "dgvPila";
+            this.dgvPila.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvPila.Size = new System.Drawing.Size(592, 251);
+            this.dgvPila.TabIndex = 3;
             // 
             // Column1
             // 
@@ -275,15 +292,15 @@
             this.Column3.HeaderText = "Tramite";
             this.Column3.Name = "Column3";
             // 
-            // LstCola
+            // LstPila
             // 
-            this.LstCola.FormattingEnabled = true;
-            this.LstCola.Location = new System.Drawing.Point(6, 19);
-            this.LstCola.Name = "LstCola";
-            this.LstCola.Size = new System.Drawing.Size(239, 251);
-            this.LstCola.TabIndex = 3;
+            this.LstPila.FormattingEnabled = true;
+            this.LstPila.Location = new System.Drawing.Point(6, 19);
+            this.LstPila.Name = "LstPila";
+            this.LstPila.Size = new System.Drawing.Size(239, 251);
+            this.LstPila.TabIndex = 3;
             // 
-            // FrmEstructuraDinamicaLinealPila1
+            // FrmEstructuraDinamicaLinealPila
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -292,16 +309,18 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
-            this.Name = "FrmEstructuraDinamicaLinealPila1";
+            this.Name = "FrmEstructuraDinamicaLinealPila";
             this.Text = "Estructura Dinamica Lineal - Pila";
+            this.Load += new System.EventHandler(this.FrmEstructuraDinamicaLinealPila1_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,10 +346,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dgvCola;
+        private System.Windows.Forms.DataGridView dgvPila;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ListBox LstCola;
+        private System.Windows.Forms.ListBox LstPila;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
