@@ -37,7 +37,8 @@ namespace PryEstructuraDeDatos
 
         private void simpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmEstructuraDinamicaListaSimple estructuraDinamicaListaSimple = new FrmEstructuraDinamicaListaSimple();
+            estructuraDinamicaListaSimple.Show();
         }
 
         private void datosDelProgramadorToolStripMenuItem_Click(object sender, EventArgs e)

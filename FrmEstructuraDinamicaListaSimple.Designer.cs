@@ -30,6 +30,7 @@ namespace PryEstructuraDeDatos
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cboCodigo = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -41,21 +42,20 @@ namespace PryEstructuraDeDatos
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dgvPila = new System.Windows.Forms.DataGridView();
+            this.dgvListaSimple = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LstPila = new System.Windows.Forms.ListBox();
-            this.cboCodigo = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LstListaSimple = new System.Windows.Forms.ListBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaSimple)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -65,25 +65,35 @@ namespace PryEstructuraDeDatos
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Location = new System.Drawing.Point(560, 21);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(278, 230);
+            this.groupBox3.Size = new System.Drawing.Size(257, 230);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Elemento Eliminado";
             // 
+            // cboCodigo
+            // 
+            this.cboCodigo.FormattingEnabled = true;
+            this.cboCodigo.Location = new System.Drawing.Point(130, 108);
+            this.cboCodigo.Name = "cboCodigo";
+            this.cboCodigo.Size = new System.Drawing.Size(121, 21);
+            this.cboCodigo.TabIndex = 3;
+            this.cboCodigo.SelectedIndexChanged += new System.EventHandler(this.cboCodigo_SelectedIndexChanged);
+            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(54, 163);
+            this.btnEliminar.Location = new System.Drawing.Point(43, 172);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(174, 39);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 88);
+            this.label7.Location = new System.Drawing.Point(19, 110);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 15);
             this.label7.TabIndex = 0;
@@ -98,9 +108,9 @@ namespace PryEstructuraDeDatos
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtCodigo);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(281, 12);
+            this.groupBox2.Location = new System.Drawing.Point(281, 21);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(258, 239);
+            this.groupBox2.Size = new System.Drawing.Size(258, 230);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nuevo Elemento";
@@ -113,10 +123,11 @@ namespace PryEstructuraDeDatos
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(93, 118);
+            this.txtTramite.Location = new System.Drawing.Point(93, 117);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(159, 20);
             this.txtTramite.TabIndex = 1;
@@ -171,11 +182,21 @@ namespace PryEstructuraDeDatos
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(239, 239);
+            this.groupBox1.Size = new System.Drawing.Size(239, 230);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PryEstructuraDeDatos.Properties.Resources.ed5;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(227, 204);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -190,28 +211,28 @@ namespace PryEstructuraDeDatos
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox4.Controls.Add(this.dgvPila);
-            this.groupBox4.Controls.Add(this.LstPila);
+            this.groupBox4.Controls.Add(this.dgvListaSimple);
+            this.groupBox4.Controls.Add(this.LstListaSimple);
             this.groupBox4.Location = new System.Drawing.Point(12, 277);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(826, 280);
+            this.groupBox4.Size = new System.Drawing.Size(805, 280);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Listado en una lista y una grilla";
             // 
-            // dgvPila
+            // dgvListaSimple
             // 
-            this.dgvPila.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListaSimple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaSimple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaSimple.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvPila.Location = new System.Drawing.Point(269, 19);
-            this.dgvPila.Name = "dgvPila";
-            this.dgvPila.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvPila.Size = new System.Drawing.Size(551, 251);
-            this.dgvPila.TabIndex = 3;
+            this.dgvListaSimple.Location = new System.Drawing.Point(269, 19);
+            this.dgvListaSimple.Name = "dgvListaSimple";
+            this.dgvListaSimple.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvListaSimple.Size = new System.Drawing.Size(530, 251);
+            this.dgvListaSimple.TabIndex = 3;
             // 
             // Column1
             // 
@@ -228,39 +249,19 @@ namespace PryEstructuraDeDatos
             this.Column3.HeaderText = "Tramite";
             this.Column3.Name = "Column3";
             // 
-            // LstPila
+            // LstListaSimple
             // 
-            this.LstPila.FormattingEnabled = true;
-            this.LstPila.Location = new System.Drawing.Point(6, 19);
-            this.LstPila.Name = "LstPila";
-            this.LstPila.Size = new System.Drawing.Size(239, 251);
-            this.LstPila.TabIndex = 3;
-            // 
-            // cboCodigo
-            // 
-            this.cboCodigo.Enabled = false;
-            this.cboCodigo.FormattingEnabled = true;
-            this.cboCodigo.Location = new System.Drawing.Point(151, 87);
-            this.cboCodigo.Name = "cboCodigo";
-            this.cboCodigo.Size = new System.Drawing.Size(121, 21);
-            this.cboCodigo.TabIndex = 3;
-            this.cboCodigo.SelectedIndexChanged += new System.EventHandler(this.cboCodigo_SelectedIndexChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PryEstructuraDeDatos.Properties.Resources.ed5;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(227, 214);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.LstListaSimple.FormattingEnabled = true;
+            this.LstListaSimple.Location = new System.Drawing.Point(6, 19);
+            this.LstListaSimple.Name = "LstListaSimple";
+            this.LstListaSimple.Size = new System.Drawing.Size(239, 251);
+            this.LstListaSimple.TabIndex = 3;
             // 
             // FrmEstructuraDinamicaListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 570);
+            this.ClientSize = new System.Drawing.Size(830, 570);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -273,9 +274,9 @@ namespace PryEstructuraDeDatos
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaSimple)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,10 +299,10 @@ namespace PryEstructuraDeDatos
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dgvPila;
+        private System.Windows.Forms.DataGridView dgvListaSimple;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ListBox LstPila;
+        private System.Windows.Forms.ListBox LstListaSimple;
     }
 }

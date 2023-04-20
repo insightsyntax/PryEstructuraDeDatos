@@ -21,5 +21,59 @@ namespace PryEstructuraDeDatos
         {
 
         }
+
+        ClsListaSimple FilaDePersonas = new ClsListaSimple();
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            ClsNodo Nodo = new ClsNodo();
+            ClsNodo ObjNodo = new ClsNodo();
+            ObjNodo.codigo = Convert.ToInt32(txtCodigo.Text);
+            ObjNodo.nombre = txtNombre.Text;
+            ObjNodo.tramite = txtTramite.Text;
+
+            FilaDePersonas.Agregar(ObjNodo);
+            FilaDePersonas.Recorrer(dgvListaSimple);
+            FilaDePersonas.Recorrer(LstListaSimple);
+            FilaDePersonas.Recorrer(cboCodigo);
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+            ControlCombo();
+
+        }
+
+        private void ControlCombo()
+        {
+            if (FilaDePersonas.Primero != null)
+            {
+                cboCodigo.Enabled = true;
+            }
+            else
+            {
+                cboCodigo.Enabled = false;
+            }
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Int32 Cod = Convert.ToInt32(cboCodigo.Text);
+                if (FilaDePersonas.Primero != null)
+                {
+                    FilaDePersonas.Eliminar(Cod);
+                    FilaDePersonas.Recorrer(dgvListaSimple);
+                    FilaDePersonas.Recorrer(LstListaSimple);
+                    FilaDePersonas.Recorrer(cboCodigo);
+                }
+            }
+            catch (Exception exc)
+            {
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+                MessageBox.Show(exc.Message);
+            }
+            btnEliminar.Enabled = false;
+        }
     }
 }

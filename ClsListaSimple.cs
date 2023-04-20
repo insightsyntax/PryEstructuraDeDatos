@@ -94,7 +94,7 @@ namespace PryEstructuraDeDatos
             Combo.Items.Clear();
             while (aux != null)
             {
-                Combo.Items.Add(aux.nombre);
+                Combo.Items.Add(aux.codigo);
                 aux = aux.siguiente;
             }
         }
