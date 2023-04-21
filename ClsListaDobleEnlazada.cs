@@ -58,10 +58,71 @@ namespace PryEstructuraDeDatos
                 }
             }
         }
+        /*Eliminar
+         * 1) cuando 1 solo nodo
+         * 2) cuando quiero borrar el primero 
+         * 3) Cuando quiero borrar el ultimo
+         * 4)cuando es uno intermedio
+         */
         public void Eliminar (Int32 Codigo)
         {
+            if (Codigo == Primero.codigo && Primero == ultimo) //Primer caso
+            {
+                Primero = null;
+                ultimo = null;
+            }
+            else
+            {
+                if (Primero.codigo == Codigo) //Segundo caso
+                {
+                    Primero = Primero.siguiente;
+                    Primero.anterior = null;
+                }
+                else
+                {
+                    if (ultimo.codigo == Codigo) //Tercer caso
+                    {
+                        ultimo = ultimo.anterior;
+                        ultimo.siguiente = null;
+                    }
+                    else //Ultimo caso
+                    {
+                        ClsNodo ant = Primero;
+                        ClsNodo aux = Primero;
+                        while (aux.codigo < Codigo)
+                        {
+                            ant = aux;
+                            aux = aux.siguiente;
 
+                        }
+                        ant.siguiente = aux.siguiente;
+                        aux = aux.siguiente;
+                        aux.anterior = ant;
+                    }
+                }
+
+            }
         }
-
+        
+        public void Recorrer(DataGridView Grilla)
+        {
+            ClsNodo aux = ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.codigo, aux.nombre, aux.tramite);
+                aux = aux.siguiente;
+            }
+        }
+        public void RecorrerDesc(DataGridView Grilla)
+        {
+            ClsNodo aux = ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.codigo, aux.nombre, aux.tramite);
+                aux = aux.anterior;
+            }
+        }
     }
 }

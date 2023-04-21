@@ -61,5 +61,10 @@ namespace PryEstructuraDeDatos
             }
             btnEliminar.Enabled = false;
         }
+
+        private void FrmEstructuraDinamicaListaSimple_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

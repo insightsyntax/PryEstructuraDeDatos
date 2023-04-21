@@ -16,5 +16,10 @@ namespace PryEstructuraDeDatos
         {
             InitializeComponent();
         }
+        ClsListaDobleEnlazada FilaDePersonas = new ClsListaDobleEnlazada();
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
