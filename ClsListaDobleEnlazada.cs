@@ -124,5 +124,9 @@ namespace PryEstructuraDeDatos
                 aux = aux.anterior;
             }
         }
+        public void Recorrer(ComboBox combo)
+        {
+            
+        }
     }
 }
