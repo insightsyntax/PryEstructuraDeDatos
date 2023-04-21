@@ -267,6 +267,7 @@ namespace PryEstructuraDeDatos
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Name = "FrmEstructuraDinamicaListaSimple";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEstructuraDinamicaListaSimple";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

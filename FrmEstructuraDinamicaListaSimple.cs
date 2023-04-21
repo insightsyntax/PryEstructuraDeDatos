@@ -38,20 +38,6 @@ namespace PryEstructuraDeDatos
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
-            ControlCombo();
-
-        }
-
-        private void ControlCombo()
-        {
-            if (FilaDePersonas.Primero != null)
-            {
-                cboCodigo.Enabled = true;
-            }
-            else
-            {
-                cboCodigo.Enabled = false;
-            }
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {

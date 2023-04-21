@@ -74,6 +74,12 @@
     <Compile Include="FrmEstructuraDinamicaListaSimple.Designer.cs">
       <DependentUpon>FrmEstructuraDinamicaListaSimple.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListaDoblementeEnlazada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaDoblementeEnlazada.Designer.cs">
+      <DependentUpon>FrmListaDoblementeEnlazada.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstructuraDinamicaListaSimple.resx">
       <DependentUpon>FrmEstructuraDinamicaListaSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaDoblementeEnlazada.resx">
+      <DependentUpon>FrmListaDoblementeEnlazada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -125,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ed5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
