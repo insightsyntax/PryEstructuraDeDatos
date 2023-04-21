@@ -98,7 +98,5 @@ namespace PryEstructuraDeDatos
                 aux = aux.siguiente;
             }
         }
-
-
     }
 }

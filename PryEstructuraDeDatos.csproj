@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsCola.cs" />
+    <Compile Include="ClsListaDobleEnlazada.cs" />
     <Compile Include="ClsListaSimple.cs" />
     <Compile Include="ClsNodo.cs" />
     <Compile Include="ClsPila.cs" />
@@ -137,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,6 +13,9 @@ namespace PryEstructuraDeDatos
         private string nom;
         private string tra;
         private ClsNodo sig; //Puntero
+        private ClsNodo ant;
+        private ClsNodo pri;
+        private ClsNodo ult;
 
         //Propiedades
         public Int32 codigo
@@ -35,8 +38,20 @@ namespace PryEstructuraDeDatos
             get { return sig; }
             set { sig = value; }
         }
-
-
-
+        public ClsNodo anterior
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+        public ClsNodo primero
+        {
+            get { return pri; }
+            set { pri = value; }
+        }
+        public ClsNodo ultimo
+        {
+            get { return ult; }
+            set { ult = value; }
+        }
     }
 }

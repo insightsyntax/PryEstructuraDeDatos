@@ -40,17 +40,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvListaDoble = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LstListaDoble = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -63,7 +66,7 @@
             this.groupBox3.Size = new System.Drawing.Size(182, 230);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Elemento Eliminado";
+            this.groupBox3.Text = "Eliminar un elemento";
             // 
             // cboCodigo
             // 
@@ -169,23 +172,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Codigo:";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(239, 230);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.groupBox4.Controls.Add(this.dgvListaDoble);
             this.groupBox4.Controls.Add(this.LstListaDoble);
-            this.groupBox4.Location = new System.Drawing.Point(12, 269);
+            this.groupBox4.Location = new System.Drawing.Point(12, 249);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(730, 280);
+            this.groupBox4.Size = new System.Drawing.Size(730, 300);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Listado en una lista y una grilla";
@@ -201,7 +195,7 @@
             this.dgvListaDoble.Location = new System.Drawing.Point(269, 19);
             this.dgvListaDoble.Name = "dgvListaDoble";
             this.dgvListaDoble.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvListaDoble.Size = new System.Drawing.Size(430, 251);
+            this.dgvListaDoble.Size = new System.Drawing.Size(455, 264);
             this.dgvListaDoble.TabIndex = 3;
             // 
             // Column1
@@ -224,26 +218,49 @@
             this.LstListaDoble.FormattingEnabled = true;
             this.LstListaDoble.Location = new System.Drawing.Point(6, 19);
             this.LstListaDoble.Name = "LstListaDoble";
-            this.LstListaDoble.Size = new System.Drawing.Size(239, 251);
+            this.LstListaDoble.Size = new System.Drawing.Size(252, 264);
             this.LstListaDoble.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(258, 229);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lista doble enlazada";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PryEstructuraDeDatos.Properties.Resources.images;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(246, 208);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmListaDoblementeEnlazada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 556);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Name = "FrmListaDoblementeEnlazada";
-            this.Text = "FrmListaDoblementeEnlazada";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lista doble enlazada";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,12 +279,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dgvListaDoble;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.ListBox LstListaDoble;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
