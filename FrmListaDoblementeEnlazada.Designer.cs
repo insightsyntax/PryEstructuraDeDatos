@@ -49,8 +49,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.RdbDescendiente = new System.Windows.Forms.RadioButton();
+            this.RdbAscendiente = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -88,6 +88,7 @@
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label7
             // 
@@ -166,6 +167,7 @@
             this.txtCodigo.Size = new System.Drawing.Size(111, 20);
             this.txtCodigo.TabIndex = 1;
             this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label2
             // 
@@ -248,8 +250,8 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.radioButton2);
-            this.groupBox5.Controls.Add(this.radioButton1);
+            this.groupBox5.Controls.Add(this.RdbDescendiente);
+            this.groupBox5.Controls.Add(this.RdbAscendiente);
             this.groupBox5.Location = new System.Drawing.Point(545, 136);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(197, 106);
@@ -257,27 +259,27 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Organizar lista";
             // 
-            // radioButton1
+            // RdbDescendiente
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(13, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(84, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ascendiente";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RdbDescendiente.AutoSize = true;
+            this.RdbDescendiente.Location = new System.Drawing.Point(13, 59);
+            this.RdbDescendiente.Name = "RdbDescendiente";
+            this.RdbDescendiente.Size = new System.Drawing.Size(91, 17);
+            this.RdbDescendiente.TabIndex = 0;
+            this.RdbDescendiente.TabStop = true;
+            this.RdbDescendiente.Text = "Descendiente";
+            this.RdbDescendiente.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // RdbAscendiente
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(13, 59);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(91, 17);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Descendiente";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RdbAscendiente.AutoSize = true;
+            this.RdbAscendiente.Location = new System.Drawing.Point(13, 19);
+            this.RdbAscendiente.Name = "RdbAscendiente";
+            this.RdbAscendiente.Size = new System.Drawing.Size(84, 17);
+            this.RdbAscendiente.TabIndex = 0;
+            this.RdbAscendiente.TabStop = true;
+            this.RdbAscendiente.Text = "Ascendiente";
+            this.RdbAscendiente.UseVisualStyleBackColor = true;
             // 
             // FrmListaDoblementeEnlazada
             // 
@@ -329,7 +331,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton RdbDescendiente;
+        private System.Windows.Forms.RadioButton RdbAscendiente;
     }
 }

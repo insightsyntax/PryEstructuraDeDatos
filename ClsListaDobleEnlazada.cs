@@ -64,7 +64,7 @@ namespace PryEstructuraDeDatos
          * 3) Cuando quiero borrar el ultimo
          * 4)cuando es uno intermedio
          */
-        public void Eliminar (Int32 Codigo)
+        public void Eliminar(Int32 Codigo)
         {
             if (Codigo == Primero.codigo && Primero == ultimo) //Primer caso
             {
@@ -103,10 +103,30 @@ namespace PryEstructuraDeDatos
 
             }
         }
-        
-        public void Recorrer(DataGridView Grilla)
+        public void Recorrer(ComboBox Combo)
         {
             ClsNodo aux = ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.codigo);
+                aux = aux.anterior;
+            }
+        }
+        public void Recorrer(ListBox Lista)
+        {
+            ClsNodo aux = Primero;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.codigo + " " + aux.nombre + " " +
+                aux.tramite);
+                aux = aux.siguiente;
+            }
+        }
+        public void Recorrer(DataGridView Grilla)
+        {
+            ClsNodo aux = Primero;
             Grilla.Rows.Clear();
             while (aux != null)
             {
@@ -124,9 +144,26 @@ namespace PryEstructuraDeDatos
                 aux = aux.anterior;
             }
         }
-        public void Recorrer(ComboBox combo)
+        public void RecorrerDesc(ListBox Lista)
         {
-            
+            ClsNodo aux = ultimo;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.codigo + " " + aux.nombre + " " + aux.tramite);
+                aux = aux.anterior;
+            }
+        }
+        public void RecorrerDesc(ComboBox Combo)
+        {
+            ClsNodo aux = ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.codigo);
+                aux = aux.anterior;
+            }
         }
     }
-}
+} 
+

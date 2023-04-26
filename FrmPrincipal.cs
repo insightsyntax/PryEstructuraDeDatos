@@ -46,5 +46,11 @@ namespace PryEstructuraDeDatos
             FrmDatosdelProgramador datosdelProgramador = new FrmDatosdelProgramador();
             datosdelProgramador.Show();    
         }
+
+        private void dobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListaDoblementeEnlazada listaDoblementeEnlazada = new FrmListaDoblementeEnlazada();
+            listaDoblementeEnlazada.Show();
+        }
     }
 }
