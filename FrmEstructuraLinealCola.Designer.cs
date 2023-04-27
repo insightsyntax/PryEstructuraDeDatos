@@ -1,7 +1,7 @@
 ﻿
 namespace PryEstructuraDeDatos
 {
-    partial class FrmEstructuraDinamicaLinealCola
+    partial class FrmEstructuraLinealCola
     {
         /// <summary>
         /// Required designer variable.

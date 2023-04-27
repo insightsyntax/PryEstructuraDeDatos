@@ -53,5 +53,15 @@ namespace PryEstructuraDeDatos
             get { return ult; }
             set { ult = value; }
         }
+        public ClsNodo izquierdo
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+        public ClsNodo derecho
+        {
+            get { return sig; }
+            set { sig = value; }
+        }
     }
 }

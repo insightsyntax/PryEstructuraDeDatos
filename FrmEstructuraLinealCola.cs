@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryEstructuraDeDatos
 {
-    public partial class FrmEstructuraDinamicaLinealCola : Form
+    public partial class FrmEstructuraLinealCola : Form
     {
-        public FrmEstructuraDinamicaLinealCola()
+        public FrmEstructuraLinealCola()
         {
             InitializeComponent();
         }

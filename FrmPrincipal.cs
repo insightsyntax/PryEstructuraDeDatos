@@ -19,14 +19,14 @@ namespace PryEstructuraDeDatos
 
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEstructuraDinamicaLinealCola estructuraDinamicaLinealCola = new FrmEstructuraDinamicaLinealCola();
+            FrmEstructuraLinealCola estructuraDinamicaLinealCola = new FrmEstructuraLinealCola();
             estructuraDinamicaLinealCola.Show();
 
         }
 
         private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEstructuraDinamicaLinealPila estructuraDinamicaLinealPila1 = new FrmEstructuraDinamicaLinealPila();
+            FrmEstructuraLinealPila estructuraDinamicaLinealPila1 = new FrmEstructuraLinealPila();
             estructuraDinamicaLinealPila1.Show();
         }
 
@@ -37,7 +37,7 @@ namespace PryEstructuraDeDatos
 
         private void simpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEstructuraDinamicaListaSimple estructuraDinamicaListaSimple = new FrmEstructuraDinamicaListaSimple();
+            FrmEstructuraLinealListaSimple estructuraDinamicaListaSimple = new FrmEstructuraLinealListaSimple();
             estructuraDinamicaListaSimple.Show();
         }
 
@@ -49,7 +49,7 @@ namespace PryEstructuraDeDatos
 
         private void dobleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmListaDoblementeEnlazada listaDoblementeEnlazada = new FrmListaDoblementeEnlazada();
+            FrmEstructuraLinealListaDoblementeEnlazada listaDoblementeEnlazada = new FrmEstructuraLinealListaDoblementeEnlazada();
             listaDoblementeEnlazada.Show();
         }
     }

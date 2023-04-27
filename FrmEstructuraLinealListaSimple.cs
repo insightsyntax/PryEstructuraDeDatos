@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryEstructuraDeDatos
 {
-    public partial class FrmEstructuraDinamicaListaSimple : Form
+    public partial class FrmEstructuraLinealListaSimple : Form
     {
-        public FrmEstructuraDinamicaListaSimple()
+        public FrmEstructuraLinealListaSimple()
         {
             InitializeComponent();
         }

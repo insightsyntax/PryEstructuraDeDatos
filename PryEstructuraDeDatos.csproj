@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsArbolBinario.cs" />
     <Compile Include="ClsCola.cs" />
     <Compile Include="ClsListaDobleEnlazada.cs" />
     <Compile Include="ClsListaSimple.cs" />
@@ -57,29 +58,29 @@
     <Compile Include="DatosdelProgramador.Designer.cs">
       <DependentUpon>DatosdelProgramador.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEstructuraDinamicaLinealCola.cs">
+    <Compile Include="FrmEstructuraLinealCola.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEstructuraDinamicaLinealCola.Designer.cs">
-      <DependentUpon>FrmEstructuraDinamicaLinealCola.cs</DependentUpon>
+    <Compile Include="FrmEstructuraLinealCola.Designer.cs">
+      <DependentUpon>FrmEstructuraLinealCola.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEstructuraDinamicaLinealPila.cs">
+    <Compile Include="FrmEstructuraLinealPila.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEstructuraDinamicaLinealPila.Designer.cs">
-      <DependentUpon>FrmEstructuraDinamicaLinealPila.cs</DependentUpon>
+    <Compile Include="FrmEstructuraLinealPila.Designer.cs">
+      <DependentUpon>FrmEstructuraLinealPila.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEstructuraDinamicaListaSimple.cs">
+    <Compile Include="FrmEstructuraLinealListaSimple.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEstructuraDinamicaListaSimple.Designer.cs">
-      <DependentUpon>FrmEstructuraDinamicaListaSimple.cs</DependentUpon>
+    <Compile Include="FrmEstructuraLinealListaSimple.Designer.cs">
+      <DependentUpon>FrmEstructuraLinealListaSimple.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmListaDoblementeEnlazada.cs">
+    <Compile Include="FrmEstructuraLinealListaDoblementeEnlazada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmListaDoblementeEnlazada.Designer.cs">
-      <DependentUpon>FrmListaDoblementeEnlazada.cs</DependentUpon>
+    <Compile Include="FrmEstructuraLinealListaDoblementeEnlazada.Designer.cs">
+      <DependentUpon>FrmEstructuraLinealListaDoblementeEnlazada.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -92,17 +93,17 @@
     <EmbeddedResource Include="DatosdelProgramador.resx">
       <DependentUpon>DatosdelProgramador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEstructuraDinamicaLinealCola.resx">
-      <DependentUpon>FrmEstructuraDinamicaLinealCola.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEstructuraLinealCola.resx">
+      <DependentUpon>FrmEstructuraLinealCola.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEstructuraDinamicaLinealPila.resx">
-      <DependentUpon>FrmEstructuraDinamicaLinealPila.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEstructuraLinealPila.resx">
+      <DependentUpon>FrmEstructuraLinealPila.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEstructuraDinamicaListaSimple.resx">
-      <DependentUpon>FrmEstructuraDinamicaListaSimple.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEstructuraLinealListaSimple.resx">
+      <DependentUpon>FrmEstructuraLinealListaSimple.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmListaDoblementeEnlazada.resx">
-      <DependentUpon>FrmListaDoblementeEnlazada.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEstructuraLinealListaDoblementeEnlazada.resx">
+      <DependentUpon>FrmEstructuraLinealListaDoblementeEnlazada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
