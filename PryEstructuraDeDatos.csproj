@@ -82,6 +82,12 @@
     <Compile Include="FrmEstructuraLinealListaDoblementeEnlazada.Designer.cs">
       <DependentUpon>FrmEstructuraLinealListaDoblementeEnlazada.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEstructuraRamificadaArbolBinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstructuraRamificadaArbolBinario.Designer.cs">
+      <DependentUpon>FrmEstructuraRamificadaArbolBinario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstructuraLinealListaDoblementeEnlazada.resx">
       <DependentUpon>FrmEstructuraLinealListaDoblementeEnlazada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstructuraRamificadaArbolBinario.resx">
+      <DependentUpon>FrmEstructuraRamificadaArbolBinario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
