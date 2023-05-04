@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.IO;
+using System.Xml.Linq;
+
 namespace PryEstructuraDeDatos
 {
     class ClsArbolBinario
@@ -16,6 +20,7 @@ namespace PryEstructuraDeDatos
             get { return Inicio; }
             set { Inicio = value; }
         }
+
         public void Agregar (ClsNodo nuevo)
         {
             nuevo.izquierdo = null;
@@ -106,6 +111,43 @@ namespace PryEstructuraDeDatos
                 InOrderAsc(Cmb, R.derecho);
             }
         }
+        public void InOrderAscArchivo(ClsNodo nodo, List<ClsNodo> ListaNodos)
+        {
+            if (nodo != null)
+            {
+                InOrderAscArchivo(nodo.izquierdo, ListaNodos);
+                ListaNodos.Add(nodo);
+                InOrderAscArchivo(nodo.derecho, ListaNodos);
+            }
+        }
+        public void ExportarAsc (string NombreArchivo, Form formulario)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            saveFileDialog.FileName = "data.csv";
+            saveFileDialog.DefaultExt = ".csv";
+
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            saveFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+
+            DialogResult result = saveFileDialog.ShowDialog(formulario);
+            if (result == DialogResult.OK)
+                {
+                    using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                    {
+                        writer.WriteLine("codigo;nombre;tramite");
+
+                        List<ClsNodo> ListaNodos = new List<ClsNodo>();
+                        InOrderAscArchivo(Raiz, ListaNodos);
+
+                        foreach (ClsNodo nodo in ListaNodos)
+                        {
+                            writer.WriteLine($"{nodo.codigo};{nodo.nombre};{nodo.tramite}");
+                        }
+                    }
+                }           
+        }
         /*Recorrido descendiente 
          * 1)Derecho
          * 2)Raiz
@@ -122,7 +164,7 @@ namespace PryEstructuraDeDatos
             {
                 InOrderDesc(DGV, R.derecho);
             }
-            DGV.Rows.Add(R.codigo);
+            DGV.Rows.Add(R.codigo, R.nombre, R.tramite);
             if (R.izquierdo != null)
             {
                 InOrderDesc(DGV, R.izquierdo);
@@ -162,6 +204,43 @@ namespace PryEstructuraDeDatos
                 InOrderDesc(Cmb, R.izquierdo);
             }
         }
+        public void InOrderDescArchivo(ClsNodo nodo, List<ClsNodo> ListaNodos)
+        {
+            if (nodo != null)
+            {
+                InOrderDescArchivo(nodo.derecho, ListaNodos);
+                ListaNodos.Add(nodo);
+                InOrderDescArchivo(nodo.izquierdo, ListaNodos);
+            }
+        }
+        public void ExportarDesc(string NombreArchivo, Form formulario)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            saveFileDialog.FileName = "data.csv";
+            saveFileDialog.DefaultExt = ".csv";
+
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            saveFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+
+            DialogResult result = saveFileDialog.ShowDialog(formulario);
+            if (result == DialogResult.OK)
+            {
+                using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                {
+                    writer.WriteLine("codigo;nombre;tramite");
+
+                    List<ClsNodo> ListaNodos = new List<ClsNodo>();
+                    InOrderDescArchivo(Raiz, ListaNodos);
+
+                    foreach (ClsNodo nodo in ListaNodos)
+                    {
+                        writer.WriteLine($"{nodo.codigo};{nodo.nombre};{nodo.tramite}");
+                    }
+                }
+            }
+        }
         /* Recorrido Pre-Orden
          * Consiste en:
          * Mostrar el nodo raíz.
@@ -175,11 +254,12 @@ namespace PryEstructuraDeDatos
         }
         public void PreOrder(DataGridView DGV, ClsNodo R)
         {
-            DGV.Rows.Add(R.codigo);
+            DGV.Rows.Add(R.codigo, R.nombre, R.tramite);
             if (R.izquierdo != null)
             {
                 PreOrder(DGV, R.izquierdo);
             }
+
             if (R.derecho != null)
             {
                 PreOrder(DGV, R.derecho);
@@ -219,6 +299,43 @@ namespace PryEstructuraDeDatos
                 PreOrder(Cmb, R.derecho);
             }
         }
+        public void PreOrderArchivo(ClsNodo nodo, List<ClsNodo> ListaNodos)
+        {
+            if (nodo != null)
+            {
+                ListaNodos.Add(nodo);
+                PreOrderArchivo(nodo.izquierdo, ListaNodos);
+                PreOrderArchivo(nodo.derecho, ListaNodos);
+            }
+        }
+        public void ExportarPre(string NombreArchivo, Form formulario)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            saveFileDialog.FileName = "data.csv";
+            saveFileDialog.DefaultExt = ".csv";
+
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            saveFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+
+            DialogResult result = saveFileDialog.ShowDialog(formulario);
+            if (result == DialogResult.OK)
+            {
+                using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                {
+                    writer.WriteLine("codigo;nombre;tramite");
+
+                    List<ClsNodo> ListaNodos = new List<ClsNodo>();
+                    PreOrderArchivo (Raiz, ListaNodos);
+
+                    foreach (ClsNodo nodo in ListaNodos)
+                    {
+                        writer.WriteLine($"{nodo.codigo};{nodo.nombre};{nodo.tramite}");
+                    }
+                }
+            }
+        }
         /*Recorrido Post-Orden
          * 1)Izquierdo
          * 2)Derecho
@@ -239,7 +356,7 @@ namespace PryEstructuraDeDatos
             {
                 PostOrder(DGV, R.derecho);
             }
-            DGV.Rows.Add(R.codigo);
+            DGV.Rows.Add(R.codigo, R.nombre, R.tramite);
         }
         public void RecorrerPost(ListBox Lista)
         {
@@ -275,10 +392,45 @@ namespace PryEstructuraDeDatos
             }
             Cmb.Items.Add(R.codigo);
         }
+        private void PostOrderArchivo(ClsNodo Raiz, List<ClsNodo> listanodos)
+        {
+            if (Raiz != null)
+            {
+                PostOrderArchivo(Raiz.izquierdo, listanodos);
+                PostOrderArchivo(Raiz.derecho, listanodos);
+                listanodos.Add(Raiz);
+            }
+        }
+        public void ExportarPost(string NombreArchivo, Form form)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-        /*Equilibrar
-         * 
-         * 
+            saveFileDialog.FileName = "data.csv";
+            saveFileDialog.DefaultExt = ".csv";
+
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            saveFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+
+            DialogResult result = saveFileDialog.ShowDialog(form);
+
+            if (result == DialogResult.OK)
+            {
+                using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                {
+                    writer.WriteLine("Codigo;Nombre;Tramite");
+
+                    List<ClsNodo> nodeList = new List<ClsNodo>();
+                    PostOrderArchivo(Raiz, nodeList);
+                    foreach (ClsNodo node in nodeList)
+                    {
+                        writer.WriteLine($"{node.codigo};{node.nombre};{node.tramite}");
+                    }
+                }
+            }
+        }
+        /*
+         * Equilibrar
          */
         private ClsNodo[] vector = new ClsNodo[100];
         private Int32 i = 0;

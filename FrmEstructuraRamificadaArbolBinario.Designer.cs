@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.GboBotones = new System.Windows.Forms.GroupBox();
-            this.BtnListar = new System.Windows.Forms.Button();
-            this.RbtnOrder = new System.Windows.Forms.RadioButton();
-            this.RbtnDescendente = new System.Windows.Forms.RadioButton();
-            this.RbtnAscendente = new System.Windows.Forms.RadioButton();
-            this.RbtnPreOrder = new System.Windows.Forms.RadioButton();
+            this.RdbPostOrder = new System.Windows.Forms.RadioButton();
+            this.RdbDescendiente = new System.Windows.Forms.RadioButton();
+            this.RdbAscendiente = new System.Windows.Forms.RadioButton();
+            this.RdbPreOrder = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GboListaGrilla = new System.Windows.Forms.GroupBox();
             this.LstArbolBinario = new System.Windows.Forms.ListBox();
@@ -54,7 +53,7 @@
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblCodigo = new System.Windows.Forms.Label();
             this.BtnEquilibrar = new System.Windows.Forms.Button();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.BtnExportar = new System.Windows.Forms.Button();
             this.GboBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GboListaGrilla.SuspendLayout();
@@ -65,79 +64,71 @@
             // 
             // GboBotones
             // 
-            this.GboBotones.Controls.Add(this.BtnListar);
-            this.GboBotones.Controls.Add(this.RbtnOrder);
-            this.GboBotones.Controls.Add(this.RbtnDescendente);
-            this.GboBotones.Controls.Add(this.RbtnAscendente);
-            this.GboBotones.Controls.Add(this.RbtnPreOrder);
+            this.GboBotones.Controls.Add(this.RdbPostOrder);
+            this.GboBotones.Controls.Add(this.RdbDescendiente);
+            this.GboBotones.Controls.Add(this.RdbAscendiente);
+            this.GboBotones.Controls.Add(this.RdbPreOrder);
             this.GboBotones.Location = new System.Drawing.Point(464, 11);
             this.GboBotones.Margin = new System.Windows.Forms.Padding(2);
             this.GboBotones.Name = "GboBotones";
             this.GboBotones.Padding = new System.Windows.Forms.Padding(2);
-            this.GboBotones.Size = new System.Drawing.Size(128, 197);
+            this.GboBotones.Size = new System.Drawing.Size(161, 197);
             this.GboBotones.TabIndex = 29;
             this.GboBotones.TabStop = false;
             this.GboBotones.Text = "Elija como se listarán los elementos";
             // 
-            // BtnListar
+            // RdbPostOrder
             // 
-            this.BtnListar.Location = new System.Drawing.Point(13, 158);
-            this.BtnListar.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnListar.Name = "BtnListar";
-            this.BtnListar.Size = new System.Drawing.Size(98, 35);
-            this.BtnListar.TabIndex = 23;
-            this.BtnListar.Text = "Listar";
-            this.BtnListar.UseVisualStyleBackColor = true;
-            this.BtnListar.Click += new System.EventHandler(this.BtnListar_Click);
+            this.RdbPostOrder.AutoSize = true;
+            this.RdbPostOrder.Location = new System.Drawing.Point(13, 159);
+            this.RdbPostOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.RdbPostOrder.Name = "RdbPostOrder";
+            this.RdbPostOrder.Size = new System.Drawing.Size(75, 17);
+            this.RdbPostOrder.TabIndex = 18;
+            this.RdbPostOrder.TabStop = true;
+            this.RdbPostOrder.Text = "Post Order";
+            this.RdbPostOrder.UseVisualStyleBackColor = true;
+            this.RdbPostOrder.CheckedChanged += new System.EventHandler(this.RdbPostOrder_CheckedChanged);
             // 
-            // RbtnOrder
+            // RdbDescendiente
             // 
-            this.RbtnOrder.AutoSize = true;
-            this.RbtnOrder.Location = new System.Drawing.Point(13, 129);
-            this.RbtnOrder.Margin = new System.Windows.Forms.Padding(2);
-            this.RbtnOrder.Name = "RbtnOrder";
-            this.RbtnOrder.Size = new System.Drawing.Size(75, 17);
-            this.RbtnOrder.TabIndex = 18;
-            this.RbtnOrder.TabStop = true;
-            this.RbtnOrder.Text = "Post Order";
-            this.RbtnOrder.UseVisualStyleBackColor = true;
+            this.RdbDescendiente.AutoSize = true;
+            this.RdbDescendiente.Location = new System.Drawing.Point(13, 73);
+            this.RdbDescendiente.Margin = new System.Windows.Forms.Padding(2);
+            this.RdbDescendiente.Name = "RdbDescendiente";
+            this.RdbDescendiente.Size = new System.Drawing.Size(91, 17);
+            this.RdbDescendiente.TabIndex = 16;
+            this.RdbDescendiente.TabStop = true;
+            this.RdbDescendiente.Text = "Descendiente";
+            this.RdbDescendiente.UseVisualStyleBackColor = true;
+            this.RdbDescendiente.CheckedChanged += new System.EventHandler(this.RdbDescendiente_CheckedChanged);
             // 
-            // RbtnDescendente
+            // RdbAscendiente
             // 
-            this.RbtnDescendente.AutoSize = true;
-            this.RbtnDescendente.Location = new System.Drawing.Point(13, 63);
-            this.RbtnDescendente.Margin = new System.Windows.Forms.Padding(2);
-            this.RbtnDescendente.Name = "RbtnDescendente";
-            this.RbtnDescendente.Size = new System.Drawing.Size(89, 17);
-            this.RbtnDescendente.TabIndex = 16;
-            this.RbtnDescendente.TabStop = true;
-            this.RbtnDescendente.Text = "Descendente";
-            this.RbtnDescendente.UseVisualStyleBackColor = true;
+            this.RdbAscendiente.AutoSize = true;
+            this.RdbAscendiente.Location = new System.Drawing.Point(13, 30);
+            this.RdbAscendiente.Margin = new System.Windows.Forms.Padding(2);
+            this.RdbAscendiente.Name = "RdbAscendiente";
+            this.RdbAscendiente.Size = new System.Drawing.Size(84, 17);
+            this.RdbAscendiente.TabIndex = 15;
+            this.RdbAscendiente.TabStop = true;
+            this.RdbAscendiente.Text = "Ascendiente";
+            this.RdbAscendiente.UseVisualStyleBackColor = true;
+            this.RdbAscendiente.CheckedChanged += new System.EventHandler(this.RdbAscendente_CheckedChanged);
             // 
-            // RbtnAscendente
+            // RdbPreOrder
             // 
-            this.RbtnAscendente.AutoSize = true;
-            this.RbtnAscendente.Location = new System.Drawing.Point(13, 30);
-            this.RbtnAscendente.Margin = new System.Windows.Forms.Padding(2);
-            this.RbtnAscendente.Name = "RbtnAscendente";
-            this.RbtnAscendente.Size = new System.Drawing.Size(82, 17);
-            this.RbtnAscendente.TabIndex = 15;
-            this.RbtnAscendente.TabStop = true;
-            this.RbtnAscendente.Text = "Ascendente";
-            this.RbtnAscendente.UseVisualStyleBackColor = true;
-            // 
-            // RbtnPreOrder
-            // 
-            this.RbtnPreOrder.AutoSize = true;
-            this.RbtnPreOrder.Location = new System.Drawing.Point(13, 96);
-            this.RbtnPreOrder.Margin = new System.Windows.Forms.Padding(2);
-            this.RbtnPreOrder.Name = "RbtnPreOrder";
-            this.RbtnPreOrder.Size = new System.Drawing.Size(70, 17);
-            this.RbtnPreOrder.TabIndex = 17;
-            this.RbtnPreOrder.TabStop = true;
-            this.RbtnPreOrder.Text = "Pre Order";
-            this.RbtnPreOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RbtnPreOrder.UseVisualStyleBackColor = true;
+            this.RdbPreOrder.AutoSize = true;
+            this.RdbPreOrder.Location = new System.Drawing.Point(13, 116);
+            this.RdbPreOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.RdbPreOrder.Name = "RdbPreOrder";
+            this.RdbPreOrder.Size = new System.Drawing.Size(70, 17);
+            this.RdbPreOrder.TabIndex = 17;
+            this.RdbPreOrder.TabStop = true;
+            this.RdbPreOrder.Text = "Pre Order";
+            this.RdbPreOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RdbPreOrder.UseVisualStyleBackColor = true;
+            this.RdbPreOrder.CheckedChanged += new System.EventHandler(this.RdbPreOrder_CheckedChanged);
             // 
             // pictureBox1
             // 
@@ -158,7 +149,7 @@
             this.GboListaGrilla.Margin = new System.Windows.Forms.Padding(2);
             this.GboListaGrilla.Name = "GboListaGrilla";
             this.GboListaGrilla.Padding = new System.Windows.Forms.Padding(2);
-            this.GboListaGrilla.Size = new System.Drawing.Size(754, 263);
+            this.GboListaGrilla.Size = new System.Drawing.Size(787, 263);
             this.GboListaGrilla.TabIndex = 28;
             this.GboListaGrilla.TabStop = false;
             this.GboListaGrilla.Text = "Listado en una lista y una grilla";
@@ -185,7 +176,7 @@
             this.DgvArbolBinario.Name = "DgvArbolBinario";
             this.DgvArbolBinario.RowHeadersWidth = 51;
             this.DgvArbolBinario.RowTemplate.Height = 24;
-            this.DgvArbolBinario.Size = new System.Drawing.Size(569, 238);
+            this.DgvArbolBinario.Size = new System.Drawing.Size(602, 238);
             this.DgvArbolBinario.TabIndex = 10;
             // 
             // Column1
@@ -211,7 +202,7 @@
             this.GboElementoEliminado.Controls.Add(this.CboCodigo);
             this.GboElementoEliminado.Controls.Add(this.BtnEliminar);
             this.GboElementoEliminado.Controls.Add(this.LblCodigoEliminar);
-            this.GboElementoEliminado.Location = new System.Drawing.Point(596, 93);
+            this.GboElementoEliminado.Location = new System.Drawing.Point(629, 93);
             this.GboElementoEliminado.Margin = new System.Windows.Forms.Padding(2);
             this.GboElementoEliminado.Name = "GboElementoEliminado";
             this.GboElementoEliminado.Padding = new System.Windows.Forms.Padding(2);
@@ -337,7 +328,7 @@
             // 
             // BtnEquilibrar
             // 
-            this.BtnEquilibrar.Location = new System.Drawing.Point(597, 11);
+            this.BtnEquilibrar.Location = new System.Drawing.Point(630, 11);
             this.BtnEquilibrar.Name = "BtnEquilibrar";
             this.BtnEquilibrar.Size = new System.Drawing.Size(81, 62);
             this.BtnEquilibrar.TabIndex = 30;
@@ -345,19 +336,22 @@
             this.BtnEquilibrar.UseVisualStyleBackColor = true;
             this.BtnEquilibrar.Click += new System.EventHandler(this.BtnEquilibrar_Click);
             // 
-            // treeView1
+            // BtnExportar
             // 
-            this.treeView1.Location = new System.Drawing.Point(16, 482);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(121, 97);
-            this.treeView1.TabIndex = 31;
+            this.BtnExportar.Location = new System.Drawing.Point(656, 482);
+            this.BtnExportar.Name = "BtnExportar";
+            this.BtnExportar.Size = new System.Drawing.Size(143, 32);
+            this.BtnExportar.TabIndex = 31;
+            this.BtnExportar.Text = "Exportar";
+            this.BtnExportar.UseVisualStyleBackColor = true;
+            this.BtnExportar.Click += new System.EventHandler(this.BtnExportar_Click);
             // 
             // FrmEstructuraRamificadaArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 693);
-            this.Controls.Add(this.treeView1);
+            this.ClientSize = new System.Drawing.Size(810, 526);
+            this.Controls.Add(this.BtnExportar);
             this.Controls.Add(this.BtnEquilibrar);
             this.Controls.Add(this.GboBotones);
             this.Controls.Add(this.pictureBox1);
@@ -366,6 +360,7 @@
             this.Controls.Add(this.GboNuevoElemento);
             this.Name = "FrmEstructuraRamificadaArbolBinario";
             this.Text = "Estructura Ramificadas - Arbol Binario";
+            this.Load += new System.EventHandler(this.FrmEstructuraRamificadaArbolBinario_Load);
             this.GboBotones.ResumeLayout(false);
             this.GboBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -382,11 +377,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox GboBotones;
-        private System.Windows.Forms.Button BtnListar;
-        private System.Windows.Forms.RadioButton RbtnOrder;
-        private System.Windows.Forms.RadioButton RbtnDescendente;
-        private System.Windows.Forms.RadioButton RbtnAscendente;
-        private System.Windows.Forms.RadioButton RbtnPreOrder;
+        private System.Windows.Forms.RadioButton RdbPostOrder;
+        private System.Windows.Forms.RadioButton RdbDescendiente;
+        private System.Windows.Forms.RadioButton RdbAscendiente;
+        private System.Windows.Forms.RadioButton RdbPreOrder;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox GboListaGrilla;
         private System.Windows.Forms.ListBox LstArbolBinario;
@@ -407,6 +401,6 @@
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblCodigo;
         private System.Windows.Forms.Button BtnEquilibrar;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Button BtnExportar;
     }
 }
