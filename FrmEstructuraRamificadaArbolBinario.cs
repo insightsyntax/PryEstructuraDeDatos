@@ -16,5 +16,29 @@ namespace PryEstructuraDeDatos
         {
             InitializeComponent();
         }
+        ClsArbolBinario Arbol = new ClsArbolBinario();
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            ClsNodo ObjNodo = new ClsNodo();
+            ObjNodo.codigo = Convert.ToInt32(TxtCodigo.Text);
+            ObjNodo.nombre = TxtNombre.Text;
+            ObjNodo.tramite = TxtTramite.Text;
+
+
+            Arbol.Agregar(ObjNodo);
+            Arbol.RecorrerAsc(DgvArbolBinario);
+            Arbol.RecorrerAsc(LstArbolBinario);
+            Arbol.RecorrerAsc(CboCodigo);
+
+            TxtCodigo.Text = "";
+            TxtNombre.Text = "";
+            TxtTramite.Text = "";
+        }
+
+        private void BtnListar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
