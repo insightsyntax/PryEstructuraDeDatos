@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GrpBotones = new System.Windows.Forms.GroupBox();
+            this.GboBotones = new System.Windows.Forms.GroupBox();
             this.BtnListar = new System.Windows.Forms.Button();
             this.RbtnOrder = new System.Windows.Forms.RadioButton();
             this.RbtnDescendente = new System.Windows.Forms.RadioButton();
             this.RbtnAscendente = new System.Windows.Forms.RadioButton();
             this.RbtnPreOrder = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.GrpListaGrilla = new System.Windows.Forms.GroupBox();
+            this.GboListaGrilla = new System.Windows.Forms.GroupBox();
             this.LstArbolBinario = new System.Windows.Forms.ListBox();
             this.DgvArbolBinario = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GrpElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.GboElementoEliminado = new System.Windows.Forms.GroupBox();
             this.CboCodigo = new System.Windows.Forms.ComboBox();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.LblCodigoEliminar = new System.Windows.Forms.Label();
-            this.GrpNuevoElemento = new System.Windows.Forms.GroupBox();
+            this.GboNuevoElemento = new System.Windows.Forms.GroupBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
@@ -53,29 +53,31 @@
             this.LblTramite = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblCodigo = new System.Windows.Forms.Label();
-            this.GrpBotones.SuspendLayout();
+            this.BtnEquilibrar = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.GboBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.GrpListaGrilla.SuspendLayout();
+            this.GboListaGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvArbolBinario)).BeginInit();
-            this.GrpElementoEliminado.SuspendLayout();
-            this.GrpNuevoElemento.SuspendLayout();
+            this.GboElementoEliminado.SuspendLayout();
+            this.GboNuevoElemento.SuspendLayout();
             this.SuspendLayout();
             // 
-            // GrpBotones
+            // GboBotones
             // 
-            this.GrpBotones.Controls.Add(this.BtnListar);
-            this.GrpBotones.Controls.Add(this.RbtnOrder);
-            this.GrpBotones.Controls.Add(this.RbtnDescendente);
-            this.GrpBotones.Controls.Add(this.RbtnAscendente);
-            this.GrpBotones.Controls.Add(this.RbtnPreOrder);
-            this.GrpBotones.Location = new System.Drawing.Point(464, 11);
-            this.GrpBotones.Margin = new System.Windows.Forms.Padding(2);
-            this.GrpBotones.Name = "GrpBotones";
-            this.GrpBotones.Padding = new System.Windows.Forms.Padding(2);
-            this.GrpBotones.Size = new System.Drawing.Size(128, 197);
-            this.GrpBotones.TabIndex = 29;
-            this.GrpBotones.TabStop = false;
-            this.GrpBotones.Text = "Elija como se listarán los elementos";
+            this.GboBotones.Controls.Add(this.BtnListar);
+            this.GboBotones.Controls.Add(this.RbtnOrder);
+            this.GboBotones.Controls.Add(this.RbtnDescendente);
+            this.GboBotones.Controls.Add(this.RbtnAscendente);
+            this.GboBotones.Controls.Add(this.RbtnPreOrder);
+            this.GboBotones.Location = new System.Drawing.Point(464, 11);
+            this.GboBotones.Margin = new System.Windows.Forms.Padding(2);
+            this.GboBotones.Name = "GboBotones";
+            this.GboBotones.Padding = new System.Windows.Forms.Padding(2);
+            this.GboBotones.Size = new System.Drawing.Size(128, 197);
+            this.GboBotones.TabIndex = 29;
+            this.GboBotones.TabStop = false;
+            this.GboBotones.Text = "Elija como se listarán los elementos";
             // 
             // BtnListar
             // 
@@ -139,6 +141,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::PryEstructuraDeDatos.Properties.Resources._192px_Binary_tree__oriented_digraph_;
             this.pictureBox1.Location = new System.Drawing.Point(12, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -147,18 +150,18 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
-            // GrpListaGrilla
+            // GboListaGrilla
             // 
-            this.GrpListaGrilla.Controls.Add(this.LstArbolBinario);
-            this.GrpListaGrilla.Controls.Add(this.DgvArbolBinario);
-            this.GrpListaGrilla.Location = new System.Drawing.Point(12, 214);
-            this.GrpListaGrilla.Margin = new System.Windows.Forms.Padding(2);
-            this.GrpListaGrilla.Name = "GrpListaGrilla";
-            this.GrpListaGrilla.Padding = new System.Windows.Forms.Padding(2);
-            this.GrpListaGrilla.Size = new System.Drawing.Size(754, 263);
-            this.GrpListaGrilla.TabIndex = 28;
-            this.GrpListaGrilla.TabStop = false;
-            this.GrpListaGrilla.Text = "Listado en una lista y una grilla";
+            this.GboListaGrilla.Controls.Add(this.LstArbolBinario);
+            this.GboListaGrilla.Controls.Add(this.DgvArbolBinario);
+            this.GboListaGrilla.Location = new System.Drawing.Point(12, 214);
+            this.GboListaGrilla.Margin = new System.Windows.Forms.Padding(2);
+            this.GboListaGrilla.Name = "GboListaGrilla";
+            this.GboListaGrilla.Padding = new System.Windows.Forms.Padding(2);
+            this.GboListaGrilla.Size = new System.Drawing.Size(754, 263);
+            this.GboListaGrilla.TabIndex = 28;
+            this.GboListaGrilla.TabStop = false;
+            this.GboListaGrilla.Text = "Listado en una lista y una grilla";
             // 
             // LstArbolBinario
             // 
@@ -182,7 +185,7 @@
             this.DgvArbolBinario.Name = "DgvArbolBinario";
             this.DgvArbolBinario.RowHeadersWidth = 51;
             this.DgvArbolBinario.RowTemplate.Height = 24;
-            this.DgvArbolBinario.Size = new System.Drawing.Size(569, 242);
+            this.DgvArbolBinario.Size = new System.Drawing.Size(569, 238);
             this.DgvArbolBinario.TabIndex = 10;
             // 
             // Column1
@@ -203,19 +206,19 @@
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
-            // GrpElementoEliminado
+            // GboElementoEliminado
             // 
-            this.GrpElementoEliminado.Controls.Add(this.CboCodigo);
-            this.GrpElementoEliminado.Controls.Add(this.BtnEliminar);
-            this.GrpElementoEliminado.Controls.Add(this.LblCodigoEliminar);
-            this.GrpElementoEliminado.Location = new System.Drawing.Point(596, 93);
-            this.GrpElementoEliminado.Margin = new System.Windows.Forms.Padding(2);
-            this.GrpElementoEliminado.Name = "GrpElementoEliminado";
-            this.GrpElementoEliminado.Padding = new System.Windows.Forms.Padding(2);
-            this.GrpElementoEliminado.Size = new System.Drawing.Size(170, 115);
-            this.GrpElementoEliminado.TabIndex = 27;
-            this.GrpElementoEliminado.TabStop = false;
-            this.GrpElementoEliminado.Text = "Elemento Eliminado";
+            this.GboElementoEliminado.Controls.Add(this.CboCodigo);
+            this.GboElementoEliminado.Controls.Add(this.BtnEliminar);
+            this.GboElementoEliminado.Controls.Add(this.LblCodigoEliminar);
+            this.GboElementoEliminado.Location = new System.Drawing.Point(596, 93);
+            this.GboElementoEliminado.Margin = new System.Windows.Forms.Padding(2);
+            this.GboElementoEliminado.Name = "GboElementoEliminado";
+            this.GboElementoEliminado.Padding = new System.Windows.Forms.Padding(2);
+            this.GboElementoEliminado.Size = new System.Drawing.Size(170, 115);
+            this.GboElementoEliminado.TabIndex = 27;
+            this.GboElementoEliminado.TabStop = false;
+            this.GboElementoEliminado.Text = "Elemento Eliminado";
             // 
             // CboCodigo
             // 
@@ -246,23 +249,23 @@
             this.LblCodigoEliminar.TabIndex = 2;
             this.LblCodigoEliminar.Text = "Código:";
             // 
-            // GrpNuevoElemento
+            // GboNuevoElemento
             // 
-            this.GrpNuevoElemento.Controls.Add(this.BtnAgregar);
-            this.GrpNuevoElemento.Controls.Add(this.TxtNombre);
-            this.GrpNuevoElemento.Controls.Add(this.TxtCodigo);
-            this.GrpNuevoElemento.Controls.Add(this.TxtTramite);
-            this.GrpNuevoElemento.Controls.Add(this.LblTramite);
-            this.GrpNuevoElemento.Controls.Add(this.LblNombre);
-            this.GrpNuevoElemento.Controls.Add(this.LblCodigo);
-            this.GrpNuevoElemento.Location = new System.Drawing.Point(261, 11);
-            this.GrpNuevoElemento.Margin = new System.Windows.Forms.Padding(2);
-            this.GrpNuevoElemento.Name = "GrpNuevoElemento";
-            this.GrpNuevoElemento.Padding = new System.Windows.Forms.Padding(2);
-            this.GrpNuevoElemento.Size = new System.Drawing.Size(186, 197);
-            this.GrpNuevoElemento.TabIndex = 26;
-            this.GrpNuevoElemento.TabStop = false;
-            this.GrpNuevoElemento.Text = "Nuevo Elemento";
+            this.GboNuevoElemento.Controls.Add(this.BtnAgregar);
+            this.GboNuevoElemento.Controls.Add(this.TxtNombre);
+            this.GboNuevoElemento.Controls.Add(this.TxtCodigo);
+            this.GboNuevoElemento.Controls.Add(this.TxtTramite);
+            this.GboNuevoElemento.Controls.Add(this.LblTramite);
+            this.GboNuevoElemento.Controls.Add(this.LblNombre);
+            this.GboNuevoElemento.Controls.Add(this.LblCodigo);
+            this.GboNuevoElemento.Location = new System.Drawing.Point(261, 11);
+            this.GboNuevoElemento.Margin = new System.Windows.Forms.Padding(2);
+            this.GboNuevoElemento.Name = "GboNuevoElemento";
+            this.GboNuevoElemento.Padding = new System.Windows.Forms.Padding(2);
+            this.GboNuevoElemento.Size = new System.Drawing.Size(186, 197);
+            this.GboNuevoElemento.TabIndex = 26;
+            this.GboNuevoElemento.TabStop = false;
+            this.GboNuevoElemento.Text = "Nuevo Elemento";
             // 
             // BtnAgregar
             // 
@@ -332,51 +335,70 @@
             this.LblCodigo.TabIndex = 2;
             this.LblCodigo.Text = "Código:";
             // 
+            // BtnEquilibrar
+            // 
+            this.BtnEquilibrar.Location = new System.Drawing.Point(597, 11);
+            this.BtnEquilibrar.Name = "BtnEquilibrar";
+            this.BtnEquilibrar.Size = new System.Drawing.Size(81, 62);
+            this.BtnEquilibrar.TabIndex = 30;
+            this.BtnEquilibrar.Text = "Equilibrar arbol";
+            this.BtnEquilibrar.UseVisualStyleBackColor = true;
+            this.BtnEquilibrar.Click += new System.EventHandler(this.BtnEquilibrar_Click);
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(16, 482);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(121, 97);
+            this.treeView1.TabIndex = 31;
+            // 
             // FrmEstructuraRamificadaArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 482);
-            this.Controls.Add(this.GrpBotones);
+            this.ClientSize = new System.Drawing.Size(774, 693);
+            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.BtnEquilibrar);
+            this.Controls.Add(this.GboBotones);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.GrpListaGrilla);
-            this.Controls.Add(this.GrpElementoEliminado);
-            this.Controls.Add(this.GrpNuevoElemento);
+            this.Controls.Add(this.GboListaGrilla);
+            this.Controls.Add(this.GboElementoEliminado);
+            this.Controls.Add(this.GboNuevoElemento);
             this.Name = "FrmEstructuraRamificadaArbolBinario";
             this.Text = "Estructura Ramificadas - Arbol Binario";
-            this.GrpBotones.ResumeLayout(false);
-            this.GrpBotones.PerformLayout();
+            this.GboBotones.ResumeLayout(false);
+            this.GboBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.GrpListaGrilla.ResumeLayout(false);
+            this.GboListaGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvArbolBinario)).EndInit();
-            this.GrpElementoEliminado.ResumeLayout(false);
-            this.GrpElementoEliminado.PerformLayout();
-            this.GrpNuevoElemento.ResumeLayout(false);
-            this.GrpNuevoElemento.PerformLayout();
+            this.GboElementoEliminado.ResumeLayout(false);
+            this.GboElementoEliminado.PerformLayout();
+            this.GboNuevoElemento.ResumeLayout(false);
+            this.GboNuevoElemento.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GrpBotones;
+        private System.Windows.Forms.GroupBox GboBotones;
         private System.Windows.Forms.Button BtnListar;
         private System.Windows.Forms.RadioButton RbtnOrder;
         private System.Windows.Forms.RadioButton RbtnDescendente;
         private System.Windows.Forms.RadioButton RbtnAscendente;
         private System.Windows.Forms.RadioButton RbtnPreOrder;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox GrpListaGrilla;
+        private System.Windows.Forms.GroupBox GboListaGrilla;
         private System.Windows.Forms.ListBox LstArbolBinario;
         private System.Windows.Forms.DataGridView DgvArbolBinario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.GroupBox GrpElementoEliminado;
+        private System.Windows.Forms.GroupBox GboElementoEliminado;
         private System.Windows.Forms.ComboBox CboCodigo;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label LblCodigoEliminar;
-        private System.Windows.Forms.GroupBox GrpNuevoElemento;
+        private System.Windows.Forms.GroupBox GboNuevoElemento;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.TextBox TxtCodigo;
@@ -384,5 +406,7 @@
         private System.Windows.Forms.Label LblTramite;
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblCodigo;
+        private System.Windows.Forms.Button BtnEquilibrar;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }

@@ -275,5 +275,46 @@ namespace PryEstructuraDeDatos
             }
             Cmb.Items.Add(R.codigo);
         }
+
+        /*Equilibrar
+         * 
+         * 
+         */
+        private ClsNodo[] vector = new ClsNodo[100];
+        private Int32 i = 0;
+        public void Equilibrar()
+        {
+            i = 0;
+            CargarVectorInOrden(Raiz);
+            Raiz = null;
+            EquilibrarArbol(0, i - 1);
+        }
+        private void CargarVectorInOrden(ClsNodo Raiz)
+        {
+            if (Raiz.izquierdo != null)
+            {
+                CargarVectorInOrden(Raiz.izquierdo);
+            }
+            vector[i] = Raiz;
+            i = i + 1;
+            if (Raiz.derecho != null)
+            {
+                CargarVectorInOrden(Raiz.derecho);
+            }
+        }
+        private void EquilibrarArbol(Int32 ini, Int32 fin)
+        {
+            Int32 m = (ini + fin) / 2;
+            if (ini <= fin)
+            {
+                Agregar(vector[m]);
+                EquilibrarArbol(ini, m - i);
+                EquilibrarArbol(m + 1, fin);
+            }
+        }
+        public void Eliminar()
+        {
+
+        }
     }
 }

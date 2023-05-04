@@ -52,5 +52,11 @@ namespace PryEstructuraDeDatos
             FrmEstructuraLinealListaDoblementeEnlazada listaDoblementeEnlazada = new FrmEstructuraLinealListaDoblementeEnlazada();
             listaDoblementeEnlazada.Show();
         }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstructuraRamificadaArbolBinario ArbolBinario = new FrmEstructuraRamificadaArbolBinario();
+            ArbolBinario.Show();
+        }
     }
 }

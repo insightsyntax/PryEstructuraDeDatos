@@ -40,5 +40,10 @@ namespace PryEstructuraDeDatos
         {
 
         }
+
+        private void BtnEquilibrar_Click(object sender, EventArgs e)
+        {
+            Arbol.Equilibrar();
+        }
     }
 }

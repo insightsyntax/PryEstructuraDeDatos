@@ -152,5 +152,8 @@
   <ItemGroup>
     <None Include="Resources\images.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\192px-Binary_tree_%28oriented_digraph%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

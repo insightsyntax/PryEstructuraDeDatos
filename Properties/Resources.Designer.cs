@@ -63,6 +63,16 @@ namespace PryEstructuraDeDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _192px_Binary_tree__oriented_digraph_ {
+            get {
+                object obj = ResourceManager.GetObject("192px-Binary_tree_(oriented_digraph)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _200px_Pila_svg {
             get {
                 object obj = ResourceManager.GetObject("200px-Pila.svg", resourceCulture);
