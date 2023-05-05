@@ -464,7 +464,7 @@ namespace PryEstructuraDeDatos
                 EquilibrarArbol(m + 1, fin);
             }
         }
-        public void Eliminar()
+        public void Eliminar(Int32 m)
         {
 
         }

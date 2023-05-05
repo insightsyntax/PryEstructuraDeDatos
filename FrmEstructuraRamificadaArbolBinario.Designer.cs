@@ -54,6 +54,7 @@
             this.LblCodigo = new System.Windows.Forms.Label();
             this.BtnEquilibrar = new System.Windows.Forms.Button();
             this.BtnExportar = new System.Windows.Forms.Button();
+            this.TrvArbolBinario = new System.Windows.Forms.TreeView();
             this.GboBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GboListaGrilla.SuspendLayout();
@@ -149,7 +150,7 @@
             this.GboListaGrilla.Margin = new System.Windows.Forms.Padding(2);
             this.GboListaGrilla.Name = "GboListaGrilla";
             this.GboListaGrilla.Padding = new System.Windows.Forms.Padding(2);
-            this.GboListaGrilla.Size = new System.Drawing.Size(787, 263);
+            this.GboListaGrilla.Size = new System.Drawing.Size(787, 227);
             this.GboListaGrilla.TabIndex = 28;
             this.GboListaGrilla.TabStop = false;
             this.GboListaGrilla.Text = "Listado en una lista y una grilla";
@@ -160,7 +161,7 @@
             this.LstArbolBinario.Location = new System.Drawing.Point(4, 17);
             this.LstArbolBinario.Margin = new System.Windows.Forms.Padding(2);
             this.LstArbolBinario.Name = "LstArbolBinario";
-            this.LstArbolBinario.Size = new System.Drawing.Size(163, 238);
+            this.LstArbolBinario.Size = new System.Drawing.Size(163, 199);
             this.LstArbolBinario.TabIndex = 0;
             // 
             // DgvArbolBinario
@@ -176,7 +177,7 @@
             this.DgvArbolBinario.Name = "DgvArbolBinario";
             this.DgvArbolBinario.RowHeadersWidth = 51;
             this.DgvArbolBinario.RowTemplate.Height = 24;
-            this.DgvArbolBinario.Size = new System.Drawing.Size(602, 238);
+            this.DgvArbolBinario.Size = new System.Drawing.Size(602, 200);
             this.DgvArbolBinario.TabIndex = 10;
             // 
             // Column1
@@ -229,6 +230,7 @@
             this.BtnEliminar.TabIndex = 2;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // LblCodigoEliminar
             // 
@@ -338,7 +340,7 @@
             // 
             // BtnExportar
             // 
-            this.BtnExportar.Location = new System.Drawing.Point(656, 482);
+            this.BtnExportar.Location = new System.Drawing.Point(652, 455);
             this.BtnExportar.Name = "BtnExportar";
             this.BtnExportar.Size = new System.Drawing.Size(143, 32);
             this.BtnExportar.TabIndex = 31;
@@ -346,11 +348,19 @@
             this.BtnExportar.UseVisualStyleBackColor = true;
             this.BtnExportar.Click += new System.EventHandler(this.BtnExportar_Click);
             // 
+            // TrvArbolBinario
+            // 
+            this.TrvArbolBinario.Location = new System.Drawing.Point(12, 446);
+            this.TrvArbolBinario.Name = "TrvArbolBinario";
+            this.TrvArbolBinario.Size = new System.Drawing.Size(167, 225);
+            this.TrvArbolBinario.TabIndex = 32;
+            // 
             // FrmEstructuraRamificadaArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 526);
+            this.ClientSize = new System.Drawing.Size(810, 695);
+            this.Controls.Add(this.TrvArbolBinario);
             this.Controls.Add(this.BtnExportar);
             this.Controls.Add(this.BtnEquilibrar);
             this.Controls.Add(this.GboBotones);
@@ -402,5 +412,6 @@
         private System.Windows.Forms.Label LblCodigo;
         private System.Windows.Forms.Button BtnEquilibrar;
         private System.Windows.Forms.Button BtnExportar;
+        private System.Windows.Forms.TreeView TrvArbolBinario;
     }
 }

@@ -120,5 +120,10 @@ namespace PryEstructuraDeDatos
                 Arbol.ExportarPre("data.csv", this);
             }
         }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
