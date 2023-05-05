@@ -148,6 +148,18 @@ namespace PryEstructuraDeDatos
                     }
                 }           
         }
+        public void MostrarEnTreeView(ClsNodo nodo, TreeNode NodoPadre)
+        {
+            if (nodo != null)
+            {
+                TreeNode treenode = new TreeNode(nodo.codigo.ToString());
+
+                NodoPadre.Nodes.Add(treenode);
+
+                MostrarEnTreeView(nodo.izquierdo, treenode);
+                MostrarEnTreeView(nodo.derecho, treenode);
+            }
+        }
         /*Recorrido descendiente 
          * 1)Derecho
          * 2)Raiz
@@ -241,6 +253,7 @@ namespace PryEstructuraDeDatos
                 }
             }
         }
+
         /* Recorrido Pre-Orden
          * Consiste en:
          * Mostrar el nodo raíz.

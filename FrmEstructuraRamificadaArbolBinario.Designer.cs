@@ -369,7 +369,7 @@
             this.Controls.Add(this.GboElementoEliminado);
             this.Controls.Add(this.GboNuevoElemento);
             this.Name = "FrmEstructuraRamificadaArbolBinario";
-            this.Text = "Estructura Ramificadas - Arbol Binario";
+            this.Text = " Estructura ramificada - Arbol Binario";
             this.Load += new System.EventHandler(this.FrmEstructuraRamificadaArbolBinario_Load);
             this.GboBotones.ResumeLayout(false);
             this.GboBotones.PerformLayout();

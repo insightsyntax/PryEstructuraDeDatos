@@ -38,12 +38,14 @@ namespace PryEstructuraDeDatos
                 ObjNodo.nombre = TxtNombre.Text;
                 ObjNodo.tramite = TxtTramite.Text;
                 Arbol.Agregar(ObjNodo);
+                
 
                 if (RdbAscendiente.Checked)
                 {
                     Arbol.RecorrerAsc(DgvArbolBinario);
                     Arbol.RecorrerAsc(LstArbolBinario);
                     Arbol.RecorrerAsc(CboCodigo);
+                    
                 }
                 else if (RdbDescendiente.Checked)
                 {
@@ -62,6 +64,7 @@ namespace PryEstructuraDeDatos
                     Arbol.RecorrerPreOrden(DgvArbolBinario);
                     Arbol.RecorrerPre(LstArbolBinario);
                     Arbol.RecorrerPre(CboCodigo);
+                    
                 }
 
                 TxtCodigo.Text = "";
