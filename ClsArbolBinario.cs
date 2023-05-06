@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.IO;
-using System.Xml.Linq;
+
 
 namespace PryEstructuraDeDatos
 {
@@ -454,7 +454,7 @@ namespace PryEstructuraDeDatos
             Raiz = null;
             EquilibrarArbol(0, i - 1);
         }
-        private void CargarVectorInOrden(ClsNodo Raiz)
+        public void CargarVectorInOrden(ClsNodo Raiz)
         {
             if (Raiz.izquierdo != null)
             {
@@ -467,7 +467,7 @@ namespace PryEstructuraDeDatos
                 CargarVectorInOrden(Raiz.derecho);
             }
         }
-        private void EquilibrarArbol(Int32 ini, Int32 fin)
+        public void EquilibrarArbol(Int32 ini, Int32 fin)
         {
             Int32 m = (ini + fin) / 2;
             if (ini <= fin)
@@ -477,9 +477,148 @@ namespace PryEstructuraDeDatos
                 EquilibrarArbol(m + 1, fin);
             }
         }
-        public void Eliminar(Int32 m)
+        /*
+         * Busqueda
+         */
+        public ClsNodo BuscarMinimo(ClsNodo nodo)
         {
-
+            ClsNodo actual = nodo;
+            while (actual.izquierdo != null)
+            {
+                actual = actual.izquierdo;
+            }
+            return actual;
         }
+        public ClsNodo BuscarNodo(ClsNodo raiz, int codigo)
+        {
+            if (raiz == null || raiz.codigo == codigo)
+            {
+                return raiz;
+            }
+
+            if (codigo < raiz.codigo)
+            {
+                return BuscarNodo(raiz.izquierdo, codigo);
+            }
+            else
+            {
+                return BuscarNodo(raiz.derecho, codigo);
+            }
+        }
+        //Eliminar
+        public void Eliminar(int codigo)
+        {
+            ClsNodo actual = Raiz;
+            ClsNodo anterior = null;
+
+            // Buscar el nodo a eliminar
+            while (actual != null && actual.codigo != codigo)
+            {
+                anterior = actual;
+                if (codigo < actual.codigo)
+                {
+                    actual = actual.izquierdo;
+                }
+                else
+                {
+                    actual = actual.derecho;
+                }
+            }
+            // Si no se encontró el nodo, salir del método
+            if (actual == null)
+            {
+                return;
+            }
+            // Si el nodo a eliminar es una hoja
+            if (actual.izquierdo == null && actual.derecho == null)
+            {
+                // Si el nodo es la raíz
+                if (anterior == null)
+                {
+                    Raiz = null;
+                }
+                else if (anterior.izquierdo == actual)
+                {
+                    anterior.izquierdo = null;
+                }
+                else
+                {
+                    anterior.derecho = null;
+                }
+            }
+            // Si el nodo a eliminar tiene un solo hijo
+            else if (actual.izquierdo == null)
+            {
+                // Si el nodo es la raíz
+                if (anterior == null)
+                {
+                    Raiz = actual.derecho;
+                }
+                else if (anterior.izquierdo == actual)
+                {
+                    anterior.izquierdo = actual.derecho;
+                }
+                else
+                {
+                    anterior.derecho = actual.derecho;
+                }
+            }
+            else if (actual.derecho == null)
+            {
+                // Si el nodo es la raíz
+                if (anterior == null)
+                {
+                    Raiz = actual.izquierdo;
+                }
+                else if (anterior.izquierdo == actual)
+                {
+                    anterior.izquierdo = actual.izquierdo;
+                }
+                else
+                {
+                    anterior.derecho = actual.izquierdo;
+                }
+            }
+            // Si el nodo a eliminar tiene dos hijos
+            else
+            {
+                // Buscar el nodo más a la izquierda del subárbol derecho
+                ClsNodo sucesor = actual.derecho;
+                anterior = null;
+                while (sucesor.izquierdo != null)
+                {
+                    anterior = sucesor;
+                    sucesor = sucesor.izquierdo;
+                }
+
+                // Copiar el valor del sucesor al nodo a eliminar
+                actual.codigo = sucesor.codigo;
+                actual.nombre = sucesor.nombre;
+                // Eliminar el sucesor
+                if (anterior == null)
+                {
+                    actual.derecho = sucesor.derecho;
+                }
+                else
+                {
+                    anterior.izquierdo = sucesor.derecho;
+                }
+            }
+        }
+
+        public void RecorrerEnOrden(ClsNodo node, TreeNodeCollection treeNode)
+        {
+            if (node != null)
+            {
+                TreeNode newNode = new TreeNode(node.codigo.ToString());
+                // Recorre la izquierda
+                RecorrerEnOrden(node.izquierdo, newNode.Nodes);
+                //Añade el nodo actual al treeview
+                treeNode.Add(newNode);
+                // Recorre la derecha
+                RecorrerEnOrden(node.derecho, newNode.Nodes);
+            }
+        }
+
     }
 }

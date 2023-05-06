@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PryEstructuraDeDatos
 {
     class ClsNodo
-    {
+    { 
         //campos
         private Int32 cod;
         private string nom;
@@ -16,6 +16,7 @@ namespace PryEstructuraDeDatos
         private ClsNodo ant;
         private ClsNodo pri;
         private ClsNodo ult;
+        private ClsNodo padre;
 
         //Propiedades
         public Int32 codigo
@@ -62,6 +63,11 @@ namespace PryEstructuraDeDatos
         {
             get { return sig; }
             set { sig = value; }
+        }
+        public ClsNodo Padre
+        {
+            get { return padre; }
+            set { padre = value; }
         }
     }
 }
