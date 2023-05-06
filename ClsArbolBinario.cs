@@ -20,7 +20,6 @@ namespace PryEstructuraDeDatos
             get { return Inicio; }
             set { Inicio = value; }
         }
-
         public void Agregar (ClsNodo nuevo)
         {
             nuevo.izquierdo = null;
@@ -253,7 +252,6 @@ namespace PryEstructuraDeDatos
                 }
             }
         }
-
         /* Recorrido Pre-Orden
          * Consiste en:
          * Mostrar el nodo raíz.
