@@ -53,6 +53,7 @@ namespace PryEstructuraDeDatos
                     padre.derecho = nuevo;
                 }
             }
+
         }
         /* Recorrido en orden
          * Primero se recorre el nodo izquierdo 
@@ -121,31 +122,34 @@ namespace PryEstructuraDeDatos
         }
         public void ExportarAsc (string NombreArchivo, Form formulario)
         {
+            //Creo un objeto de cuadro de dialogo para guardar el archivo
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            saveFileDialog.FileName = "data.csv";
+            //Nombre por defecto
+            saveFileDialog.FileName = "ExportarArbol.csv";
+            //Extension por defecto
             saveFileDialog.DefaultExt = ".csv";
-
+            //Carpeta a guardar por defecto
             saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
+            //Filtro de extensiones permitidas
             saveFileDialog.Filter = "CSV Files (*.csv)|*.csv";
 
-            DialogResult result = saveFileDialog.ShowDialog(formulario);
-            if (result == DialogResult.OK)
+            DialogResult resultado = saveFileDialog.ShowDialog(formulario);
+            if (resultado == DialogResult.OK)
+            {
+                using (StreamWriter w = new StreamWriter(saveFileDialog.FileName))
                 {
-                    using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                    //Agrega los nombres de columna 
+                    w.WriteLine("codigo;nombre;tramite");
+
+                    List<ClsNodo> ListaNodos = new List<ClsNodo>();
+                    InOrderAscArchivo(Raiz, ListaNodos);
+
+                    foreach (ClsNodo nodo in ListaNodos)
                     {
-                        writer.WriteLine("codigo;nombre;tramite");
-
-                        List<ClsNodo> ListaNodos = new List<ClsNodo>();
-                        InOrderAscArchivo(Raiz, ListaNodos);
-
-                        foreach (ClsNodo nodo in ListaNodos)
-                        {
-                            writer.WriteLine($"{nodo.codigo};{nodo.nombre};{nodo.tramite}");
-                        }
+                    w.WriteLine($"{nodo.codigo};{nodo.nombre};{nodo.tramite}");
                     }
-                }           
+                }
+            }           
         }
         public void MostrarEnTreeView(ClsNodo nodo, TreeNode NodoPadre)
         {
@@ -617,6 +621,20 @@ namespace PryEstructuraDeDatos
                 RecorrerEnOrden(node.derecho, newNode.Nodes);
             }
         }
+        public void RecorrerPreOrden(ClsNodo node, TreeNodeCollection treeNode)
+        {
+            if (node != null)
+            {
+                //Añade el nodo actual al treeview
+                TreeNode newNode = new TreeNode(node.codigo.ToString());
+                treeNode.Add(newNode);
+                // Recorre la izquierda
+                RecorrerEnOrden(node.izquierdo, newNode.Nodes);
 
+                // Recorre la derecha
+                RecorrerEnOrden(node.derecho, newNode.Nodes);
+            }
+        }
+            
     }
 }

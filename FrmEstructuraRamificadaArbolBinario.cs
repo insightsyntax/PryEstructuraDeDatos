@@ -38,6 +38,9 @@ namespace PryEstructuraDeDatos
                 Arbol.RecorrerAsc(CboCodigo);
                 TrvArbolBinario.Nodes.Clear();
                 Arbol.RecorrerEnOrden(Arbol.Raiz, TrvArbolBinario.Nodes);
+                TxtCodigo.Text = "";
+                TxtNombre.Text = "";
+                TxtTramite.Text = "";
             }
             catch (Exception exc)
             {
@@ -88,11 +91,15 @@ namespace PryEstructuraDeDatos
         }
         private void BtnListar_Click(object sender, EventArgs e)
         {
+            TrvArbolBinario.Nodes.Clear();
+            LstArbolBinario.Items.Clear();
+            DgvArbolBinario= null;
             if (RdbAscendiente.Checked)
             {
                 Arbol.RecorrerAsc(DgvArbolBinario);
                 Arbol.RecorrerAsc(CboCodigo);
                 Arbol.RecorrerAsc(LstArbolBinario);
+                Arbol.RecorrerEnOrden(Arbol.Raiz, TrvArbolBinario.Nodes);
             }
             else if (RdbDescendiente.Checked)
             {
