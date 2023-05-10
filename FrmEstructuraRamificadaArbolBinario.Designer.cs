@@ -55,6 +55,9 @@
             this.BtnEquilibrar = new System.Windows.Forms.Button();
             this.BtnExportar = new System.Windows.Forms.Button();
             this.TrvArbolBinario = new System.Windows.Forms.TreeView();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.GboBotones.SuspendLayout();
             this.GboListaGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvArbolBinario)).BeginInit();
@@ -335,9 +338,9 @@
             // 
             // BtnExportar
             // 
-            this.BtnExportar.Location = new System.Drawing.Point(656, 456);
+            this.BtnExportar.Location = new System.Drawing.Point(674, 456);
             this.BtnExportar.Name = "BtnExportar";
-            this.BtnExportar.Size = new System.Drawing.Size(143, 32);
+            this.BtnExportar.Size = new System.Drawing.Size(121, 38);
             this.BtnExportar.TabIndex = 31;
             this.BtnExportar.Text = "Exportar";
             this.BtnExportar.UseVisualStyleBackColor = true;
@@ -350,11 +353,41 @@
             this.TrvArbolBinario.Size = new System.Drawing.Size(244, 197);
             this.TrvArbolBinario.TabIndex = 32;
             // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Location = new System.Drawing.Point(374, 462);
+            this.TxtBuscar.Multiline = true;
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(110, 26);
+            this.TxtBuscar.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(288, 469);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Verificar codigo";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Location = new System.Drawing.Point(490, 462);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(110, 26);
+            this.BtnBuscar.TabIndex = 35;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // FrmEstructuraRamificadaArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 497);
+            this.ClientSize = new System.Drawing.Size(983, 641);
+            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.TrvArbolBinario);
             this.Controls.Add(this.BtnExportar);
             this.Controls.Add(this.BtnEquilibrar);
@@ -374,6 +407,7 @@
             this.GboNuevoElemento.ResumeLayout(false);
             this.GboNuevoElemento.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -406,5 +440,8 @@
         private System.Windows.Forms.Button BtnExportar;
         private System.Windows.Forms.TreeView TrvArbolBinario;
         private System.Windows.Forms.Button BtnListar;
+        private System.Windows.Forms.TextBox TxtBuscar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnBuscar;
     }
 }

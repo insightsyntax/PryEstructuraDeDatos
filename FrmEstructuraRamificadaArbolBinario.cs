@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace PryEstructuraDeDatos
 {
@@ -49,10 +47,17 @@ namespace PryEstructuraDeDatos
         }
         private void BtnEquilibrar_Click(object sender, EventArgs e)
         {
-            Arbol.Equilibrar();
-            Arbol.RecorrerAsc(DgvArbolBinario);
-            Arbol.RecorrerAsc(LstArbolBinario);
-            Arbol.RecorrerAsc(CboCodigo);
+            try
+            {
+                Arbol.Equilibrar();
+                Arbol.RecorrerAsc(DgvArbolBinario);
+                Arbol.RecorrerAsc(LstArbolBinario);
+                Arbol.RecorrerAsc(CboCodigo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void BtnExportar_Click(object sender, EventArgs e)
         {
@@ -93,7 +98,8 @@ namespace PryEstructuraDeDatos
         {
             TrvArbolBinario.Nodes.Clear();
             LstArbolBinario.Items.Clear();
-            DgvArbolBinario= null;
+            DgvArbolBinario.Rows.Clear();
+            DgvArbolBinario.Refresh();
             if (RdbAscendiente.Checked)
             {
                 Arbol.RecorrerAsc(DgvArbolBinario);
@@ -118,6 +124,25 @@ namespace PryEstructuraDeDatos
                 Arbol.RecorrerPreOrden(DgvArbolBinario);
                 Arbol.RecorrerPre(LstArbolBinario);
                 Arbol.RecorrerPre(CboCodigo);
+            }
+        }
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            int Codigo;
+            if (int.TryParse(TxtBuscar.Text, out Codigo))
+            {
+                if (Arbol.Buscar(Arbol.Raiz, Codigo))
+                {
+                    MessageBox.Show("Nodo no encontrado.");
+                }
+                else
+                {
+                    MessageBox.Show("Nodo encontrado.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Codigo no valido.");
             }
         }
     }

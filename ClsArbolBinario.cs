@@ -53,7 +53,6 @@ namespace PryEstructuraDeDatos
                     padre.derecho = nuevo;
                 }
             }
-
         }
         /* Recorrido en orden
          * Primero se recorre el nodo izquierdo 
@@ -111,6 +110,22 @@ namespace PryEstructuraDeDatos
                 InOrderAsc(Cmb, R.derecho);
             }
         }
+        public void RecorrerEnOrden(ClsNodo node, TreeNodeCollection treeNode)
+        {
+            if (node != null)
+            {
+                TreeNode newNode = new TreeNode(node.codigo.ToString());
+                // Recorre la izquierda
+                RecorrerEnOrden(node.izquierdo, newNode.Nodes);
+                //Añade el nodo actual al treeview
+                treeNode.Add(newNode);
+                // Recorre la derecha
+                RecorrerEnOrden(node.derecho, newNode.Nodes);
+            }
+        }
+        /*Exportar
+         *
+         */
         public void InOrderAscArchivo(ClsNodo nodo, List<ClsNodo> ListaNodos)
         {
             if (nodo != null)
@@ -351,6 +366,20 @@ namespace PryEstructuraDeDatos
                 }
             }
         }
+        public void RecorrerPreOrden(ClsNodo node, TreeNodeCollection treeNode)
+        {
+            if (node != null)
+            {
+                //Añade el nodo actual al treeview
+                TreeNode newNode = new TreeNode(node.codigo.ToString());
+                treeNode.Add(newNode);
+                // Recorre la izquierda
+                RecorrerEnOrden(node.izquierdo, newNode.Nodes);
+
+                // Recorre la derecha
+                RecorrerEnOrden(node.derecho, newNode.Nodes);
+            }
+        }
         /*Recorrido Post-Orden
          * 1)Izquierdo
          * 2)Derecho
@@ -406,6 +435,16 @@ namespace PryEstructuraDeDatos
                 PostOrder(Cmb, R.derecho);
             }
             Cmb.Items.Add(R.codigo);
+        }
+        public void RecorrerPostOrden(ClsNodo node, TreeNodeCollection treeNode)
+        {
+            TreeNode newNode = new TreeNode(node.codigo.ToString());
+            // Recorre la izquierda
+            RecorrerEnOrden(node.izquierdo, newNode.Nodes);
+            // Recorre la derecha
+            RecorrerEnOrden(node.derecho, newNode.Nodes);
+            //Añade el nodo actual al treeview
+            treeNode.Add(newNode);
         }
         private void PostOrderArchivo(ClsNodo Raiz, List<ClsNodo> listanodos)
         {
@@ -482,29 +521,23 @@ namespace PryEstructuraDeDatos
         /*
          * Busqueda
          */
-        public ClsNodo BuscarMinimo(ClsNodo nodo)
+        public bool Buscar(ClsNodo nodo, int CodigoBuscar)
         {
-            ClsNodo actual = nodo;
-            while (actual.izquierdo != null)
+            if (nodo == null)
             {
-                actual = actual.izquierdo;
+                return false;
             }
-            return actual;
-        }
-        public ClsNodo BuscarNodo(ClsNodo raiz, int codigo)
-        {
-            if (raiz == null || raiz.codigo == codigo)
+            else if (nodo.codigo == CodigoBuscar)
             {
-                return raiz;
+                return true;
             }
-
-            if (codigo < raiz.codigo)
+            else if (CodigoBuscar < nodo.codigo)
             {
-                return BuscarNodo(raiz.izquierdo, codigo);
+                return Buscar(nodo.izquierdo, CodigoBuscar);
             }
             else
             {
-                return BuscarNodo(raiz.derecho, codigo);
+                return Buscar(nodo.derecho, CodigoBuscar);
             }
         }
         //Eliminar
@@ -608,33 +641,6 @@ namespace PryEstructuraDeDatos
             }
         }
 
-        public void RecorrerEnOrden(ClsNodo node, TreeNodeCollection treeNode)
-        {
-            if (node != null)
-            {
-                TreeNode newNode = new TreeNode(node.codigo.ToString());
-                // Recorre la izquierda
-                RecorrerEnOrden(node.izquierdo, newNode.Nodes);
-                //Añade el nodo actual al treeview
-                treeNode.Add(newNode);
-                // Recorre la derecha
-                RecorrerEnOrden(node.derecho, newNode.Nodes);
-            }
-        }
-        public void RecorrerPreOrden(ClsNodo node, TreeNodeCollection treeNode)
-        {
-            if (node != null)
-            {
-                //Añade el nodo actual al treeview
-                TreeNode newNode = new TreeNode(node.codigo.ToString());
-                treeNode.Add(newNode);
-                // Recorre la izquierda
-                RecorrerEnOrden(node.izquierdo, newNode.Nodes);
 
-                // Recorre la derecha
-                RecorrerEnOrden(node.derecho, newNode.Nodes);
-            }
-        }
-            
     }
 }
