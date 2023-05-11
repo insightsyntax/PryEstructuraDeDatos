@@ -521,24 +521,16 @@ namespace PryEstructuraDeDatos
         /*
          * Busqueda
          */
-        public bool Buscar(ClsNodo nodo, int CodigoBuscar)
+        public ClsNodo BuscarCodigo(Int32 codigo)
         {
-            if (nodo == null)
+            ClsNodo aux = Raiz;
+            while (aux != null)
             {
-                return false;
+                if (codigo == aux.codigo) break;
+                if (codigo < aux.codigo) aux = aux.izquierdo;
+                else aux = aux.derecho;
             }
-            else if (nodo.codigo == CodigoBuscar)
-            {
-                return true;
-            }
-            else if (CodigoBuscar < nodo.codigo)
-            {
-                return Buscar(nodo.izquierdo, CodigoBuscar);
-            }
-            else
-            {
-                return Buscar(nodo.derecho, CodigoBuscar);
-            }
+            return aux;
         }
         //Eliminar
         public void Eliminar(int codigo)
