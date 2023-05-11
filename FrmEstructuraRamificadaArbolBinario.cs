@@ -128,21 +128,22 @@ namespace PryEstructuraDeDatos
         }
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            int Codigo;
-            if (int.TryParse(TxtBuscar.Text, out Codigo))
+            int CodigoBuscar;
+            if (int.TryParse(TxtBuscar.Text, out CodigoBuscar))
             {
-                if (Arbol.Buscar(Arbol.Raiz, Codigo))
+                ClsArbolBinario arbol = new ClsArbolBinario();
+                if (arbol.BuscarNodo(arbol.Raiz, CodigoBuscar))
                 {
-                    MessageBox.Show("Nodo no encontrado.");
+                    MessageBox.Show("Nodo encontrado.");
                 }
                 else
                 {
-                    MessageBox.Show("Nodo encontrado.");
+                    MessageBox.Show("Nodo no encontrado.");
                 }
             }
             else
             {
-                MessageBox.Show("Codigo no valido.");
+                MessageBox.Show("Valor invalido.");
             }
         }
     }

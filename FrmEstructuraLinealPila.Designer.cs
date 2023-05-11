@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEstructuraLinealPila));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtTramiteEliminar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtNombreEliminar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtCodigoEliminar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -64,11 +65,11 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnEliminar);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.TxtTramiteEliminar);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.TxtNombreEliminar);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.TxtCodigoEliminar);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Location = new System.Drawing.Point(601, 12);
             this.groupBox3.Name = "groupBox3";
@@ -79,7 +80,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(47, 172);
+            this.btnEliminar.Location = new System.Drawing.Point(52, 172);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(174, 39);
             this.btnEliminar.TabIndex = 2;
@@ -87,13 +88,13 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // textBox3
+            // TxtTramiteEliminar
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(93, 118);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 20);
-            this.textBox3.TabIndex = 1;
+            this.TxtTramiteEliminar.Enabled = false;
+            this.TxtTramiteEliminar.Location = new System.Drawing.Point(93, 118);
+            this.TxtTramiteEliminar.Name = "TxtTramiteEliminar";
+            this.TxtTramiteEliminar.Size = new System.Drawing.Size(159, 20);
+            this.TxtTramiteEliminar.TabIndex = 1;
             // 
             // label5
             // 
@@ -105,13 +106,13 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Tramite";
             // 
-            // textBox4
+            // TxtNombreEliminar
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(93, 70);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(159, 20);
-            this.textBox4.TabIndex = 1;
+            this.TxtNombreEliminar.Enabled = false;
+            this.TxtNombreEliminar.Location = new System.Drawing.Point(93, 70);
+            this.TxtNombreEliminar.Name = "TxtNombreEliminar";
+            this.TxtNombreEliminar.Size = new System.Drawing.Size(159, 20);
+            this.TxtNombreEliminar.TabIndex = 1;
             // 
             // label6
             // 
@@ -123,14 +124,14 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Nombre";
             // 
-            // textBox5
+            // TxtCodigoEliminar
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(141, 23);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(111, 20);
-            this.textBox5.TabIndex = 1;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtCodigoEliminar.Enabled = false;
+            this.TxtCodigoEliminar.Location = new System.Drawing.Point(141, 23);
+            this.TxtCodigoEliminar.Name = "TxtCodigoEliminar";
+            this.TxtCodigoEliminar.Size = new System.Drawing.Size(111, 20);
+            this.TxtCodigoEliminar.TabIndex = 1;
+            this.TxtCodigoEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -160,7 +161,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(33, 172);
+            this.btnAgregar.Location = new System.Drawing.Point(42, 172);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(174, 39);
             this.btnAgregar.TabIndex = 2;
@@ -300,7 +301,7 @@
             this.LstPila.Size = new System.Drawing.Size(239, 251);
             this.LstPila.TabIndex = 3;
             // 
-            // FrmEstructuraDinamicaLinealPila
+            // FrmEstructuraLinealPila
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -309,7 +310,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
-            this.Name = "FrmEstructuraDinamicaLinealPila";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmEstructuraLinealPila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura Dinamica Lineal - Pila";
             this.Load += new System.EventHandler(this.FrmEstructuraDinamicaLinealPila1_Load);
@@ -330,11 +332,11 @@
 
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtTramiteEliminar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtNombreEliminar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtCodigoEliminar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAgregar;

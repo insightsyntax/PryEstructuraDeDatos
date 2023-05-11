@@ -25,19 +25,26 @@ namespace PryEstructuraDeDatos
         ClsListaSimple FilaDePersonas = new ClsListaSimple();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ClsNodo Nodo = new ClsNodo();
-            ClsNodo ObjNodo = new ClsNodo();
-            ObjNodo.codigo = Convert.ToInt32(txtCodigo.Text);
-            ObjNodo.nombre = txtNombre.Text;
-            ObjNodo.tramite = txtTramite.Text;
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                ClsNodo ObjNodo = new ClsNodo();
+                ObjNodo.codigo = Convert.ToInt32(txtCodigo.Text);
+                ObjNodo.nombre = txtNombre.Text;
+                ObjNodo.tramite = txtTramite.Text;
 
-            FilaDePersonas.Agregar(ObjNodo);
-            FilaDePersonas.Recorrer(dgvListaSimple);
-            FilaDePersonas.Recorrer(LstListaSimple);
-            FilaDePersonas.Recorrer(cboCodigo);
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+                FilaDePersonas.Agregar(ObjNodo);
+                FilaDePersonas.Recorrer(dgvListaSimple);
+                FilaDePersonas.Recorrer(LstListaSimple);
+                FilaDePersonas.Recorrer(cboCodigo);
+                txtCodigo.Clear();
+                txtNombre.Clear();
+                txtTramite.Clear();
+                txtCodigo.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Campos sin llenar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
