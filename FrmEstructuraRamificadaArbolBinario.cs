@@ -61,22 +61,30 @@ namespace PryEstructuraDeDatos
         }
         private void BtnExportar_Click(object sender, EventArgs e)
         {
-            if (RdbAscendiente.Checked)
+            try
             {
-                Arbol.ExportarAsc("data.csv", this);
+                if (RdbAscendiente.Checked)
+                {
+                    Arbol.ExportarAsc("data.csv", this);
+                }
+                else if (RdbDescendiente.Checked)
+                {
+                    Arbol.ExportarDesc("data.csv", this);
+                }
+                else if (RdbPostOrder.Checked)
+                {
+                    Arbol.ExportarPost("data.csv", this);
+                }
+                else if (RdbPreOrder.Checked)
+                {
+                    Arbol.ExportarPre("data.csv", this);
+                }
             }
-            else if (RdbDescendiente.Checked)
+            catch (Exception ex)
             {
-                Arbol.ExportarDesc("data.csv", this);
+                MessageBox.Show(ex.Message.ToString());
             }
-            else if (RdbPostOrder.Checked)
-            {
-                Arbol.ExportarPost("data.csv", this);
-            }
-            else if (RdbPreOrder.Checked)
-            {
-                Arbol.ExportarPre("data.csv", this);
-            }
+
         }
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
@@ -88,6 +96,7 @@ namespace PryEstructuraDeDatos
                 Arbol.RecorrerAsc(DgvArbolBinario);
                 Arbol.RecorrerAsc(LstArbolBinario);
                 Arbol.RecorrerAsc(CboCodigo);
+                MessageBox.Show("Nodo eliminado.");
             }
             catch (Exception ex)
             {
@@ -96,55 +105,69 @@ namespace PryEstructuraDeDatos
         }
         private void BtnListar_Click(object sender, EventArgs e)
         {
-            TrvArbolBinario.Nodes.Clear();
-            LstArbolBinario.Items.Clear();
-            DgvArbolBinario.Rows.Clear();
-            DgvArbolBinario.Refresh();
-            if (RdbAscendiente.Checked)
+            try
             {
-                Arbol.RecorrerAsc(DgvArbolBinario);
-                Arbol.RecorrerAsc(CboCodigo);
-                Arbol.RecorrerAsc(LstArbolBinario);
-                Arbol.RecorrerEnOrden(Arbol.Raiz, TrvArbolBinario.Nodes);
+                TrvArbolBinario.Nodes.Clear();
+                LstArbolBinario.Items.Clear();
+                DgvArbolBinario.Rows.Clear();
+                DgvArbolBinario.Refresh();
+                if (RdbAscendiente.Checked)
+                {
+                    Arbol.RecorrerAsc(DgvArbolBinario);
+                    Arbol.RecorrerAsc(CboCodigo);
+                    Arbol.RecorrerAsc(LstArbolBinario);
+                    Arbol.RecorrerEnOrden(Arbol.Raiz, TrvArbolBinario.Nodes);
+                }
+                else if (RdbDescendiente.Checked)
+                {
+                    Arbol.RecorrerDesc(DgvArbolBinario);
+                    Arbol.RecorrerDesc(CboCodigo);
+                    Arbol.RecorrerDesc(LstArbolBinario);
+                    MessageBox.Show("No es posible mostrar los datos en un arbol de esta forma.");
+                }
+                else if (RdbPostOrder.Checked)
+                {
+                    Arbol.RecorrerPost(DgvArbolBinario);
+                    Arbol.RecorrerPost(CboCodigo);
+                    Arbol.RecorrerPost(LstArbolBinario);
+                    Arbol.RecorrerPostOrden(Arbol.Raiz, TrvArbolBinario.Nodes);
+                    MessageBox.Show("No es posible mostrar los datos en un arbol de esta forma.");
+                }
+                else if (RdbPreOrder.Checked)
+                {
+                    Arbol.RecorrerPreOrden(DgvArbolBinario);
+                    Arbol.RecorrerPre(LstArbolBinario);
+                    Arbol.RecorrerPre(CboCodigo);
+                    Arbol.RecorrerPreOrden(Arbol.Raiz, TrvArbolBinario.Nodes);
+                }
             }
-            else if (RdbDescendiente.Checked)
+            catch (Exception x)
             {
-                Arbol.RecorrerDesc(DgvArbolBinario);
-                Arbol.RecorrerDesc(CboCodigo) ;
-                Arbol.RecorrerDesc(LstArbolBinario) ;
+                MessageBox.Show(x.Message);
             }
-            else if (RdbPostOrder.Checked)
-            {
-                Arbol.RecorrerPost(DgvArbolBinario);
-                Arbol.RecorrerPost(CboCodigo);
-                Arbol.RecorrerPost(LstArbolBinario);
-            }
-            else if (RdbPreOrder.Checked)
-            {
-                Arbol.RecorrerPreOrden(DgvArbolBinario);
-                Arbol.RecorrerPre(LstArbolBinario);
-                Arbol.RecorrerPre(CboCodigo);
-            }
+            
         }
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            int CodigoBuscar;
-            if (int.TryParse(TxtBuscar.Text, out CodigoBuscar))
+            try
             {
-                ClsArbolBinario arbol = new ClsArbolBinario();
-                if (arbol.BuscarNodo(arbol.Raiz, CodigoBuscar))
+                if (Arbol != null)
                 {
-                    MessageBox.Show("Nodo encontrado.");
+                    Int32 Codigo = Int32.Parse(TxtBuscarCodigo.Text);
+                    ClsNodo x = Arbol.BuscarCodigo(Codigo);
+                    TxtBuscarNombre.Text = x.nombre;
+                    TxtBuscarTramite.Text = x.tramite;
                 }
                 else
                 {
-                    MessageBox.Show("Nodo no encontrado.");
+                    MessageBox.Show("Dato no encontrado.");
                 }
             }
-            else
+            catch (Exception x)
             {
-                MessageBox.Show("Valor invalido.");
+                MessageBox.Show(x.Message);   
             }
+            
         }
     }
 

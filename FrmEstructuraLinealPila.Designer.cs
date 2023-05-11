@@ -71,7 +71,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.TxtCodigoEliminar);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(601, 12);
+            this.groupBox3.Location = new System.Drawing.Point(521, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(278, 239);
             this.groupBox3.TabIndex = 8;
@@ -152,7 +152,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtCodigo);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(281, 12);
+            this.groupBox2.Location = new System.Drawing.Point(257, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(258, 239);
             this.groupBox2.TabIndex = 7;
@@ -257,9 +257,9 @@
             this.groupBox4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.groupBox4.Controls.Add(this.dgvPila);
             this.groupBox4.Controls.Add(this.LstPila);
-            this.groupBox4.Location = new System.Drawing.Point(12, 277);
+            this.groupBox4.Location = new System.Drawing.Point(12, 259);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(867, 280);
+            this.groupBox4.Size = new System.Drawing.Size(787, 280);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Listado en una lista y una grilla";
@@ -272,10 +272,10 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvPila.Location = new System.Drawing.Point(269, 19);
+            this.dgvPila.Location = new System.Drawing.Point(251, 19);
             this.dgvPila.Name = "dgvPila";
             this.dgvPila.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvPila.Size = new System.Drawing.Size(592, 251);
+            this.dgvPila.Size = new System.Drawing.Size(530, 251);
             this.dgvPila.TabIndex = 3;
             // 
             // Column1
@@ -305,7 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 566);
+            this.ClientSize = new System.Drawing.Size(806, 545);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
