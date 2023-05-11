@@ -63,9 +63,9 @@ namespace PryEstructuraDeDatos
             this.groupBox3.Controls.Add(this.cboCodigo);
             this.groupBox3.Controls.Add(this.btnEliminar);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(560, 21);
+            this.groupBox3.Location = new System.Drawing.Point(545, 21);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(257, 230);
+            this.groupBox3.Size = new System.Drawing.Size(258, 104);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Elemento Eliminado";
@@ -73,7 +73,7 @@ namespace PryEstructuraDeDatos
             // cboCodigo
             // 
             this.cboCodigo.FormattingEnabled = true;
-            this.cboCodigo.Location = new System.Drawing.Point(130, 108);
+            this.cboCodigo.Location = new System.Drawing.Point(130, 24);
             this.cboCodigo.Name = "cboCodigo";
             this.cboCodigo.Size = new System.Drawing.Size(121, 21);
             this.cboCodigo.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace PryEstructuraDeDatos
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(43, 172);
+            this.btnEliminar.Location = new System.Drawing.Point(41, 56);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(174, 39);
             this.btnEliminar.TabIndex = 2;
@@ -93,7 +93,7 @@ namespace PryEstructuraDeDatos
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 110);
+            this.label7.Location = new System.Drawing.Point(19, 26);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 15);
             this.label7.TabIndex = 0;
@@ -110,14 +110,14 @@ namespace PryEstructuraDeDatos
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(281, 21);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(258, 230);
+            this.groupBox2.Size = new System.Drawing.Size(258, 189);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nuevo Elemento";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(33, 172);
+            this.btnAgregar.Location = new System.Drawing.Point(42, 101);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(174, 39);
             this.btnAgregar.TabIndex = 2;
@@ -127,7 +127,7 @@ namespace PryEstructuraDeDatos
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(93, 117);
+            this.txtTramite.Location = new System.Drawing.Point(93, 75);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(159, 20);
             this.txtTramite.TabIndex = 1;
@@ -136,7 +136,7 @@ namespace PryEstructuraDeDatos
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 119);
+            this.label4.Location = new System.Drawing.Point(6, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 15);
             this.label4.TabIndex = 0;
@@ -144,7 +144,7 @@ namespace PryEstructuraDeDatos
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(93, 70);
+            this.txtNombre.Location = new System.Drawing.Point(93, 49);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(159, 20);
             this.txtNombre.TabIndex = 1;
@@ -153,7 +153,7 @@ namespace PryEstructuraDeDatos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 71);
+            this.label3.Location = new System.Drawing.Point(6, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 0;
@@ -184,7 +184,7 @@ namespace PryEstructuraDeDatos
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(239, 230);
+            this.groupBox1.Size = new System.Drawing.Size(239, 189);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -193,7 +193,7 @@ namespace PryEstructuraDeDatos
             this.pictureBox1.Image = global::PryEstructuraDeDatos.Properties.Resources.ed5;
             this.pictureBox1.Location = new System.Drawing.Point(6, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(227, 204);
+            this.pictureBox1.Size = new System.Drawing.Size(227, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -213,9 +213,9 @@ namespace PryEstructuraDeDatos
             this.groupBox4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.groupBox4.Controls.Add(this.dgvListaSimple);
             this.groupBox4.Controls.Add(this.LstListaSimple);
-            this.groupBox4.Location = new System.Drawing.Point(12, 277);
+            this.groupBox4.Location = new System.Drawing.Point(12, 216);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(805, 280);
+            this.groupBox4.Size = new System.Drawing.Size(791, 314);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Listado en una lista y una grilla";
@@ -231,7 +231,7 @@ namespace PryEstructuraDeDatos
             this.dgvListaSimple.Location = new System.Drawing.Point(269, 19);
             this.dgvListaSimple.Name = "dgvListaSimple";
             this.dgvListaSimple.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvListaSimple.Size = new System.Drawing.Size(530, 251);
+            this.dgvListaSimple.Size = new System.Drawing.Size(515, 279);
             this.dgvListaSimple.TabIndex = 3;
             // 
             // Column1
@@ -254,19 +254,19 @@ namespace PryEstructuraDeDatos
             this.LstListaSimple.FormattingEnabled = true;
             this.LstListaSimple.Location = new System.Drawing.Point(6, 19);
             this.LstListaSimple.Name = "LstListaSimple";
-            this.LstListaSimple.Size = new System.Drawing.Size(239, 251);
+            this.LstListaSimple.Size = new System.Drawing.Size(239, 277);
             this.LstListaSimple.TabIndex = 3;
             // 
-            // FrmEstructuraDinamicaListaSimple
+            // FrmEstructuraLinealListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 570);
+            this.ClientSize = new System.Drawing.Size(811, 535);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
-            this.Name = "FrmEstructuraDinamicaListaSimple";
+            this.Name = "FrmEstructuraLinealListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEstructuraDinamicaListaSimple";
             this.Load += new System.EventHandler(this.FrmEstructuraDinamicaListaSimple_Load);
