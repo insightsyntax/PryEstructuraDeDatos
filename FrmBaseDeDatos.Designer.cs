@@ -31,9 +31,9 @@ namespace PryEstructuraDeDatos
         {
             this.DgvBaseDatos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BtnProySimple = new System.Windows.Forms.Button();
-            this.BtnProyMulti = new System.Windows.Forms.Button();
             this.BtnJuntar = new System.Windows.Forms.Button();
+            this.BtnProyMulti = new System.Windows.Forms.Button();
+            this.BtnProySimple = new System.Windows.Forms.Button();
             this.BtnSeleccionSimple = new System.Windows.Forms.Button();
             this.BtnSeleccionMultiatributo = new System.Windows.Forms.Button();
             this.BtnSeleccionConvolucion = new System.Windows.Forms.Button();
@@ -67,27 +67,7 @@ namespace PryEstructuraDeDatos
             this.groupBox1.Size = new System.Drawing.Size(294, 142);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Operaciones de proyeccion";
-            // 
-            // BtnProySimple
-            // 
-            this.BtnProySimple.Location = new System.Drawing.Point(16, 19);
-            this.BtnProySimple.Name = "BtnProySimple";
-            this.BtnProySimple.Size = new System.Drawing.Size(252, 23);
-            this.BtnProySimple.TabIndex = 0;
-            this.BtnProySimple.Text = "Proyeccion simple";
-            this.BtnProySimple.UseVisualStyleBackColor = true;
-            this.BtnProySimple.Click += new System.EventHandler(this.BtnProySimple_Click);
-            // 
-            // BtnProyMulti
-            // 
-            this.BtnProyMulti.Location = new System.Drawing.Point(16, 60);
-            this.BtnProyMulti.Name = "BtnProyMulti";
-            this.BtnProyMulti.Size = new System.Drawing.Size(252, 23);
-            this.BtnProyMulti.TabIndex = 0;
-            this.BtnProyMulti.Text = "Proyeccion multiatributo";
-            this.BtnProyMulti.UseVisualStyleBackColor = true;
-            this.BtnProyMulti.Click += new System.EventHandler(this.BtnProyMulti_Click);
+            this.groupBox1.Text = "Operaciones de proyeccion - SELECT";
             // 
             // BtnJuntar
             // 
@@ -99,6 +79,26 @@ namespace PryEstructuraDeDatos
             this.BtnJuntar.UseVisualStyleBackColor = true;
             this.BtnJuntar.Click += new System.EventHandler(this.BtnJuntar_Click);
             // 
+            // BtnProyMulti
+            // 
+            this.BtnProyMulti.Location = new System.Drawing.Point(16, 60);
+            this.BtnProyMulti.Name = "BtnProyMulti";
+            this.BtnProyMulti.Size = new System.Drawing.Size(252, 23);
+            this.BtnProyMulti.TabIndex = 0;
+            this.BtnProyMulti.Text = "Proyeccion multiatributo";
+            this.BtnProyMulti.UseVisualStyleBackColor = true;
+            this.BtnProyMulti.Click += new System.EventHandler(this.BtnProyMulti_Click);
+            // 
+            // BtnProySimple
+            // 
+            this.BtnProySimple.Location = new System.Drawing.Point(16, 19);
+            this.BtnProySimple.Name = "BtnProySimple";
+            this.BtnProySimple.Size = new System.Drawing.Size(252, 23);
+            this.BtnProySimple.TabIndex = 0;
+            this.BtnProySimple.Text = "Proyeccion simple";
+            this.BtnProySimple.UseVisualStyleBackColor = true;
+            this.BtnProySimple.Click += new System.EventHandler(this.BtnProySimple_Click);
+            // 
             // BtnSeleccionSimple
             // 
             this.BtnSeleccionSimple.Location = new System.Drawing.Point(16, 19);
@@ -107,6 +107,7 @@ namespace PryEstructuraDeDatos
             this.BtnSeleccionSimple.TabIndex = 0;
             this.BtnSeleccionSimple.Text = "Seleccion simple";
             this.BtnSeleccionSimple.UseVisualStyleBackColor = true;
+            this.BtnSeleccionSimple.Click += new System.EventHandler(this.BtnSeleccionSimple_Click);
             // 
             // BtnSeleccionMultiatributo
             // 
@@ -116,6 +117,7 @@ namespace PryEstructuraDeDatos
             this.BtnSeleccionMultiatributo.TabIndex = 0;
             this.BtnSeleccionMultiatributo.Text = "Seleccion multiatributo";
             this.BtnSeleccionMultiatributo.UseVisualStyleBackColor = true;
+            this.BtnSeleccionMultiatributo.Click += new System.EventHandler(this.BtnSeleccionMultiatributo_Click);
             // 
             // BtnSeleccionConvolucion
             // 
@@ -125,6 +127,7 @@ namespace PryEstructuraDeDatos
             this.BtnSeleccionConvolucion.TabIndex = 0;
             this.BtnSeleccionConvolucion.Text = "Seleccion por convolucion";
             this.BtnSeleccionConvolucion.UseVisualStyleBackColor = true;
+            this.BtnSeleccionConvolucion.Click += new System.EventHandler(this.BtnSeleccionConvolucion_Click);
             // 
             // BtnUnion
             // 
@@ -134,6 +137,7 @@ namespace PryEstructuraDeDatos
             this.BtnUnion.TabIndex = 0;
             this.BtnUnion.Text = "Union";
             this.BtnUnion.UseVisualStyleBackColor = true;
+            this.BtnUnion.Click += new System.EventHandler(this.BtnUnion_Click);
             // 
             // BtnInterseccion
             // 
@@ -143,6 +147,7 @@ namespace PryEstructuraDeDatos
             this.BtnInterseccion.TabIndex = 0;
             this.BtnInterseccion.Text = "Interseccion";
             this.BtnInterseccion.UseVisualStyleBackColor = true;
+            this.BtnInterseccion.Click += new System.EventHandler(this.BtnInterseccion_Click);
             // 
             // BtnDiferencia
             // 
@@ -152,6 +157,7 @@ namespace PryEstructuraDeDatos
             this.BtnDiferencia.TabIndex = 0;
             this.BtnDiferencia.Text = "Diferencia";
             this.BtnDiferencia.UseVisualStyleBackColor = true;
+            this.BtnDiferencia.Click += new System.EventHandler(this.BtnDiferencia_Click);
             // 
             // groupBox2
             // 
@@ -163,7 +169,7 @@ namespace PryEstructuraDeDatos
             this.groupBox2.Size = new System.Drawing.Size(277, 143);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Operaciones de seleccion";
+            this.groupBox2.Text = "Operaciones de seleccion - WHERE";
             // 
             // groupBox3
             // 
