@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsArbolBinario.cs" />
+    <Compile Include="ClsBaseDatos.cs" />
     <Compile Include="ClsCola.cs" />
     <Compile Include="ClsListaDobleEnlazada.cs" />
     <Compile Include="ClsListaSimple.cs" />
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="DatosdelProgramador.Designer.cs">
       <DependentUpon>DatosdelProgramador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseDeDatos.Designer.cs">
+      <DependentUpon>FrmBaseDeDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEstructuraLinealCola.cs">
       <SubType>Form</SubType>
@@ -98,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DatosdelProgramador.resx">
       <DependentUpon>DatosdelProgramador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseDeDatos.resx">
+      <DependentUpon>FrmBaseDeDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstructuraLinealCola.resx">
       <DependentUpon>FrmEstructuraLinealCola.cs</DependentUpon>

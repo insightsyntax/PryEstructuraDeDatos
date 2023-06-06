@@ -58,5 +58,11 @@ namespace PryEstructuraDeDatos
             FrmEstructuraRamificadaArbolBinario ArbolBinario = new FrmEstructuraRamificadaArbolBinario();
             ArbolBinario.Show();
         }
+
+        private void baseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBaseDeDatos BaseDatos = new FrmBaseDeDatos();
+            BaseDatos.Show();
+        }
     }
 }
