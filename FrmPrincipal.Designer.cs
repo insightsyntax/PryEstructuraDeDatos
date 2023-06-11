@@ -43,6 +43,8 @@ namespace PryEstructuraDeDatos
             this.arbolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseDeDatosBotonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,22 +143,39 @@ namespace PryEstructuraDeDatos
             // arbolToolStripMenuItem
             // 
             this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
-            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.arbolToolStripMenuItem.Text = "Arbol...";
             this.arbolToolStripMenuItem.Click += new System.EventHandler(this.arbolToolStripMenuItem_Click);
             // 
             // grafoToolStripMenuItem
             // 
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
-            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.grafoToolStripMenuItem.Text = "Grafo...";
             // 
             // baseDeDatosToolStripMenuItem
             // 
+            this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.baseDeDatosBotonesToolStripMenuItem,
+            this.consultaBaseDeDatosToolStripMenuItem});
             this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
             this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.baseDeDatosToolStripMenuItem.Text = "Base de datos";
             this.baseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.baseDeDatosToolStripMenuItem_Click);
+            // 
+            // baseDeDatosBotonesToolStripMenuItem
+            // 
+            this.baseDeDatosBotonesToolStripMenuItem.Name = "baseDeDatosBotonesToolStripMenuItem";
+            this.baseDeDatosBotonesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.baseDeDatosBotonesToolStripMenuItem.Text = "Base de datos botones";
+            this.baseDeDatosBotonesToolStripMenuItem.Click += new System.EventHandler(this.baseDeDatosBotonesToolStripMenuItem_Click);
+            // 
+            // consultaBaseDeDatosToolStripMenuItem
+            // 
+            this.consultaBaseDeDatosToolStripMenuItem.Name = "consultaBaseDeDatosToolStripMenuItem";
+            this.consultaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.consultaBaseDeDatosToolStripMenuItem.Text = "Consulta base de datos";
+            this.consultaBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.consultaBaseDeDatosToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -191,6 +210,8 @@ namespace PryEstructuraDeDatos
         private System.Windows.Forms.ToolStripMenuItem arbolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baseDeDatosBotonesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaBaseDeDatosToolStripMenuItem;
     }
 }
 

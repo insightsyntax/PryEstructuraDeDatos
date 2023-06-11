@@ -61,8 +61,19 @@ namespace PryEstructuraDeDatos
 
         private void baseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void baseDeDatosBotonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             FrmBaseDeDatos BaseDatos = new FrmBaseDeDatos();
             BaseDatos.Show();
+        }
+
+        private void consultaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaEnBaseDeDatos consultaEnBaseDeDatos = new FrmConsultaEnBaseDeDatos();
+            consultaEnBaseDeDatos.Show();
         }
     }
 }

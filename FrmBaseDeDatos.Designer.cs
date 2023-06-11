@@ -176,7 +176,7 @@ namespace PryEstructuraDeDatos
             this.groupBox3.Controls.Add(this.BtnUnion);
             this.groupBox3.Controls.Add(this.BtnInterseccion);
             this.groupBox3.Controls.Add(this.BtnDiferencia);
-            this.groupBox3.Location = new System.Drawing.Point(595, 209);
+            this.groupBox3.Location = new System.Drawing.Point(609, 210);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(277, 142);
             this.groupBox3.TabIndex = 3;
