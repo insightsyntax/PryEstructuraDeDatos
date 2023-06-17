@@ -95,7 +95,6 @@ namespace PryEstructuraDeDatos
                 Conexion.Close();
             }
         }
-
         public DataTable EjecutarOperacion(string operacion)
         {
             string consulta = ObtenerQueryOperacion(operacion);
@@ -116,7 +115,6 @@ namespace PryEstructuraDeDatos
 
         public string ObtenerDescripcionOperacion(string operacion)
         {
-            // Aquí puedes retornar la descripción correspondiente a la operación
             string descripcion = "";
 
             switch (operacion)
@@ -137,19 +135,19 @@ namespace PryEstructuraDeDatos
                     descripcion = "Selecciona múltiples listas de atributos de los elementos";
                     break;
                 case "Seleccion multiatributo con operador AND":
-                    descripcion = "";
+                    descripcion = "Elige elementos basados en múltiples atributos, que cumplan con todos los criterios establecidos.";
                     break;
                 case "Seleccion multiatributo con operador OR":
-                    descripcion = "";
+                    descripcion = "Elige elementos que cumplan al menos una de las condiciones establecidas";
                     break;
                 case "Seleccion multiatributo por convolucion":
-                    descripcion = "";
+                    descripcion = "Extrae características simultáneas de múltiples atributos ";
                     break;
                 case "Seleccion simple":
-                    descripcion = "";
+                    descripcion = "permite filtrar los registros de una tabla según una condición específica, devolviendo únicamente aquellos que la cumplen. ";
                     break;
                 case "Union":
-                    descripcion = "";
+                    descripcion = "combina los resultados de dos o más conjuntos de datos en un solo conjunto de resultados";
                     break;
             }
 
@@ -158,7 +156,6 @@ namespace PryEstructuraDeDatos
 
         private string ObtenerQueryOperacion(string operacion)
         {
-            // Aquí puedes retornar la consulta SQL correspondiente a la operación
             string query = "";
 
             switch (operacion)
@@ -202,7 +199,17 @@ namespace PryEstructuraDeDatos
                         "ORDER BY Titulo DESC";
                     break;
                 case "Seleccion multiatributo":
-
+                    query = "SELECT Titulo, IdAutor, IdIdioma " +
+                        "FROM Libro " +
+                        "WHERE IdAutor <> 5 AND IdIdioma = 1 " +
+                        "ORDER BY Titulo ASC";
+                    break;
+                case "Seleccion por convolucion":
+                    query = "SELECT * " +
+                        "FROM (SELECT * FROM Libro WHERE IdAutor = 4) AS LIB1 " +
+                        "WHERE LIB1.IdIdioma = 1 " +
+                        "ORDER BY LIB1.Titulo";
+                    break;
             }
 
             return query;
