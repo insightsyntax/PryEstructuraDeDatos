@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace PryEstructuraDeDatos
 {
-    public partial class FrmRepasoBaseDatos : Form
+    public partial class FrmBaseDatosLista : Form
     {
         ClsBaseDatos BaseDatos = new ClsBaseDatos();
 
-        public FrmRepasoBaseDatos()
+        public FrmBaseDatosLista()
         {
             InitializeComponent();
         }

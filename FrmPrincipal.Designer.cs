@@ -45,6 +45,7 @@ namespace PryEstructuraDeDatos
             this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseDeDatosBotonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseDeDatosListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,7 +158,8 @@ namespace PryEstructuraDeDatos
             // 
             this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.baseDeDatosBotonesToolStripMenuItem,
-            this.consultaBaseDeDatosToolStripMenuItem});
+            this.consultaBaseDeDatosToolStripMenuItem,
+            this.baseDeDatosListaToolStripMenuItem});
             this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
             this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.baseDeDatosToolStripMenuItem.Text = "Base de datos";
@@ -166,7 +168,7 @@ namespace PryEstructuraDeDatos
             // baseDeDatosBotonesToolStripMenuItem
             // 
             this.baseDeDatosBotonesToolStripMenuItem.Name = "baseDeDatosBotonesToolStripMenuItem";
-            this.baseDeDatosBotonesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.baseDeDatosBotonesToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.baseDeDatosBotonesToolStripMenuItem.Text = "Base de datos botones";
             this.baseDeDatosBotonesToolStripMenuItem.Click += new System.EventHandler(this.baseDeDatosBotonesToolStripMenuItem_Click);
             // 
@@ -176,6 +178,13 @@ namespace PryEstructuraDeDatos
             this.consultaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.consultaBaseDeDatosToolStripMenuItem.Text = "Consulta base de datos";
             this.consultaBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.consultaBaseDeDatosToolStripMenuItem_Click);
+            // 
+            // baseDeDatosListaToolStripMenuItem
+            // 
+            this.baseDeDatosListaToolStripMenuItem.Name = "baseDeDatosListaToolStripMenuItem";
+            this.baseDeDatosListaToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.baseDeDatosListaToolStripMenuItem.Text = "Base de datos en lista";
+            this.baseDeDatosListaToolStripMenuItem.Click += new System.EventHandler(this.baseDeDatosListaToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -212,6 +221,7 @@ namespace PryEstructuraDeDatos
         private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baseDeDatosBotonesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaBaseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baseDeDatosListaToolStripMenuItem;
     }
 }
 

@@ -75,5 +75,11 @@ namespace PryEstructuraDeDatos
             FrmConsultaEnBaseDeDatos consultaEnBaseDeDatos = new FrmConsultaEnBaseDeDatos();
             consultaEnBaseDeDatos.Show();
         }
+
+        private void baseDeDatosListaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBaseDatosLista datosLista = new FrmBaseDatosLista(); 
+            datosLista.Show();  
+        }
     }
 }

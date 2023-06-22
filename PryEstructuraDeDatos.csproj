@@ -107,11 +107,11 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRepasoBaseDatos.cs">
+    <Compile Include="FrmBaseDatosLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRepasoBaseDatos.Designer.cs">
-      <DependentUpon>FrmRepasoBaseDatos.cs</DependentUpon>
+    <Compile Include="FrmBaseDatosLista.Designer.cs">
+      <DependentUpon>FrmBaseDatosLista.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,8 +142,8 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRepasoBaseDatos.resx">
-      <DependentUpon>FrmRepasoBaseDatos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBaseDatosLista.resx">
+      <DependentUpon>FrmBaseDatosLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

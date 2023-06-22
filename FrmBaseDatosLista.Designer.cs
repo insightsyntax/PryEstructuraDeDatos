@@ -1,6 +1,6 @@
 ﻿namespace PryEstructuraDeDatos
 {
-    partial class FrmRepasoBaseDatos
+    partial class FrmBaseDatosLista
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnListar);
             this.Name = "FrmRepasoBaseDatos";
-            this.Text = "FrmRepasoBaseDatos";
+            this.Text = "Repaso Base Datos";
             this.Load += new System.EventHandler(this.FrmRepasoBaseDatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvListar)).EndInit();
             this.ResumeLayout(false);
